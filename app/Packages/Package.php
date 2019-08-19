@@ -26,8 +26,9 @@ class Package extends Model
         return $this->belongsTo(City::class);
     }
     public function packagecategory(){
-        return $this->belongsTo(PackageCategory::class);
+        return $this->belongsTo(PackageCategory::class,'package_category_id');
     }
+
 
 
 }

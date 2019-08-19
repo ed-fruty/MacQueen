@@ -2,35 +2,27 @@
 
 namespace App\Nova;
 
-use Carbon\Carbon;
-use Hubertnnn\LaravelNova\Fields\DynamicSelect\DynamicSelect;
 use Laravel\Nova\Fields\BelongsTo;
 use Laravel\Nova\Fields\ID;
 use Illuminate\Http\Request;
-use Laravel\Nova\Fields\Image;
-use Laravel\Nova\Fields\Number;
-use Laravel\Nova\Fields\Text;
-use Laravel\Nova\Fields\Textarea;
-use Laravel\Nova\Fields\Trix;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
-class Package extends Resource
+class PackageInclusion extends Resource
 {
     /**
      * The model the resource corresponds to.
      *
      * @var string
      */
-    public static $model = 'App\Packages\Package';
-    public static $group = 'Packages';
-
+    public static $model = 'App\Packages\PackageInclusion';
+    public static $group='Packages';
 
     /**
      * The single value that should be used to represent the resource when being displayed.
      *
      * @var string
      */
-    public static $title = 'name';
+    public static $title = 'id';
 
     /**
      * The columns that should be searched.
@@ -38,7 +30,7 @@ class Package extends Resource
      * @var array
      */
     public static $search = [
-        'name',
+        'id',
     ];
 
     /**
@@ -51,14 +43,8 @@ class Package extends Resource
     {
         return [
             ID::make()->sortable(),
-            Image::make('image')->disk('public')->path('Packages/'.Carbon::now()->format('FY')),
-            Text::make('name')->sortable(),
-            Trix::make('description'),
-            BelongsTo::make('Country'),
-            BelongsTo::make('City'),
-            BelongsTo::make('PackageCategory'),
-            Number::make('days'),
-            Number::make('nights'),
+            BelongsTo::make('GeneralPackagesInclusion','general_packages_inclusion'),
+            BelongsTo::make('Package','package'),
         ];
     }
 
