@@ -5,6 +5,7 @@ namespace App\Nova;
 use Carbon\Carbon;
 use Hubertnnn\LaravelNova\Fields\DynamicSelect\DynamicSelect;
 use Laravel\Nova\Fields\BelongsTo;
+use Laravel\Nova\Fields\HasMany;
 use Laravel\Nova\Fields\ID;
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\Image;
@@ -59,6 +60,7 @@ class Package extends Resource
             BelongsTo::make('PackageCategory'),
             Number::make('days'),
             Number::make('nights'),
+            HasMany::make('PackageInclusions','packageinclusions')
         ];
     }
 

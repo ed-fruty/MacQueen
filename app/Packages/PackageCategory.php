@@ -10,4 +10,8 @@ class PackageCategory extends Model
         'name',
         'image'
     ];
+
+    public function packages(){
+        return $this->hasMany(Package::class,'package_category_id');
+    }
 }

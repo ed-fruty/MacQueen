@@ -2,6 +2,7 @@
 
 namespace App\Nova;
 
+use Laravel\Nova\Fields\HasMany;
 use Laravel\Nova\Fields\ID;
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\Text;
@@ -43,8 +44,11 @@ class Country extends Resource
         return [
             ID::make()->sortable(),
             Text::make('name')->sortable(),
-            Text::make('country_code')->sortable()
+            Text::make('country_code')->sortable(),
+            HasMany::make('Cities','cities')
+
         ];
+
     }
 
     /**
