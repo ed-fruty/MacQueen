@@ -11,70 +11,100 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
-
+      <script src="{{ asset('libs/jquery/jquery-2.2.3.min.js') }}"></script>
+        <script src="{{ asset('libs/js-cookie/js.cookie.js') }}"></script>
+        <script>
+            if ((Cookies.get('color-skin') != undefined) && (Cookies.get('color-skin') != 'color-1'))
+            {
+                $('#color-skins').attr('href', '{{ asset("css/' + Cookies.get('color-skin') + '/' + 'color.css")}}');
+            }
+            else if ((Cookies.get('color-skin') == undefined) || (Cookies.get('color-skin') == 'color-1'))
+            {
+                $('#color-skins').attr('href', '{{ asset("css/color-1/color.css")}}');
+            }
+        </script>
+      
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
     <!-- Styles -->
+      <link type="text/css" rel="stylesheet" href="{{ asset('fonts.googleapis.com/css?family=Roboto:300,400,500,700,900')}}">
+        <link type="text/css" rel="stylesheet" href="{{ asset('fonts.googleapis.com/css?family=Montserrat:400,700')}}">
+        <link type="text/css" rel="stylesheet" href="{{ asset('font/font-icon/font-awesome/css/font-awesome.css')}}">
+        <link type="text/css" rel="stylesheet" href="{{ asset('font/font-icon/font-flaticon/flaticon.css')}}">
+        <!-- LIBRARY CSS-->
+        <link type="text/css" rel="stylesheet" href="{{ asset('libs/bootstrap/css/bootstrap.min.css')}}">
+        <link type="text/css" rel="stylesheet" href="{{ asset('libs/animate/animate.css')}}">
+        <link type="text/css" rel="stylesheet" href="{{ asset('libs/slick-slider/slick.css')}}">
+        <link type="text/css" rel="stylesheet" href="{{ asset('libs/slick-slider/slick-theme.css')}}">
+        <link type="text/css" rel="stylesheet" href="{{ asset('libs/selectbox/css/jquery.selectbox.css')}}">
+        <link type="text/css" rel="stylesheet" href="{{ asset('libs/please-wait/please-wait.css')}}">
+        <link type="text/css" rel="stylesheet" href="{{ asset('libs/fancybox/css/jquery.fancybox.css?v=2.1.5')}}">
+        <link type="text/css" rel="stylesheet" href="{{ asset('libs/fancybox/css/jquery.fancybox-buttons.css?v=1.0.5')}}">
+        <link type="text/css" rel="stylesheet" href="{{ asset('libs/fancybox/css/jquery.fancybox-thumbs.css?v=1.0.7')}}">
+        <!-- STYLE CSS-->
+        <link type="text/css" rel="stylesheet" href="{{ asset('css/layout.css')}}">
+        <link type="text/css" rel="stylesheet" href="{{ asset('css/components.css')}}">
+        <link type="text/css" rel="stylesheet" href="{{ asset('css/responsive.css')}}">
+        <link type="text/css" rel="stylesheet" href="{{ asset('css/color.css')}}">
+        <!--link(type="text/css", rel='stylesheet', href='assets/css/color-1/color-1.css', id="color-skins")-->
+        <link type="text/css" rel="stylesheet" href="#" id="color-skins">
+          <link type="text/css" rel="stylesheet" href="{{ asset('libs/bootstrap-datepicker/css/bootstrap-datepicker.min.css')}}">
+
+
+
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
-            <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav mr-auto">
-
-                    </ul>
-
-                    <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ml-auto">
-                        <!-- Authentication Links -->
-                        @guest
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                            </li>
-                            @if (Route::has('register'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                                </li>
-                            @endif
-                        @else
-                            <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }} <span class="caret"></span>
-                                </a>
-
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
-                                    </a>
-
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                        @csrf
-                                    </form>
-                                </div>
-                            </li>
-                        @endguest
-                    </ul>
-                </div>
-            </div>
-        </nav>
 
         <main class="py-4">
             @yield('content')
         </main>
     </div>
+
+            <script>
+            if ((Cookies.get('color-skin') != undefined) && (Cookies.get('color-skin') != 'color-1'))
+            {
+                $('.logo .header-logo img ,.logo-footer img, .group-logo .img-logo').attr('src', '{{ asset("images/logo/logo-white-' + Cookies.get('color-skin') + '.png")}}');
+                $('.logo-black img').attr('src', '{{ asset("images/logo/logo-black-' + Cookies.get('color-skin') + '.png")}}');
+            }
+            else if ((Cookies.get('color-skin') == undefined) || (Cookies.get('color-skin') == 'color-1'))
+            {
+                $('.logo .header-logo img , .logo-footer img, .group-logo .img-logo').attr('src', '{{ asset("images/logo/logo-white-color-1.png');
+                $('.logo-black img').attr('src', 'assets/images/logo/logo-black-color-1.png")}}');
+            }
+        </script>
+        <!-- LIBRARY JS-->
+        <script src="{{ asset('libs/bootstrap/js/bootstrap.min.js') }}"></script>
+        <script src="{{ asset('libs/detect-browser/browser.js') }}"></script>
+        <script src="{{ asset('libs/smooth-scroll/jquery-smoothscroll.js') }}"></script>
+        <script src="{{ asset('libs/wow-js/wow.min.js') }}"></script>
+        <script src="{{ asset('libs/slick-slider/slick.min.js') }}"></script>
+        <script src="{{ asset('libs/selectbox/js/jquery.selectbox-0.2.js') }}"></script>
+        <script src="{{ asset('libs/please-wait/please-wait.min.js') }}"></script>
+        <script src="{{ asset('libs/fancybox/js/jquery.fancybox.js') }}"></script>
+        <script src="{{ asset('libs/fancybox/js/jquery.fancybox-buttons.js') }}"></script>
+        <script src="{{ asset('libs/fancybox/js/jquery.fancybox-thumbs.js') }}"></script>
+        <!--script(src="assets/libs/parallax/jquery.data-parallax.min.js")-->
+        <!-- MAIN JS-->
+        <script src="{{ asset('js/main.js') }}"></script>
+        <!-- LOADING JS FOR PAGE-->
+        <script src="{{ asset('js/pages/home-page.js') }}"></script>
+        <script src="{{ asset('libs/bootstrap-datepicker/js/bootstrap-datepicker.min.js') }}"></script>
+        <script>
+            var logo_str = '{{ asset("images/logo/logo-black-color-1.png")}}';
+            if (Cookies.set('color-skin'))
+            {
+                logo_str = '{{ asset("images/logo/logo-black-' + Cookies.set('color-skin') + '.png")}}';
+            }
+            window.loading_screen = window.pleaseWait(
+            {
+                logo: logo_str,
+                backgroundColor: '#fff',
+                loadingHtml: "<div class='spinner sk-spinner-wave'><div class='rect1'></div><div class='rect2'></div><div class='rect3'></div><div class='rect4'></div><div class='rect5'></div></div>",
+            });
+        </script>
 </body>
 </html>

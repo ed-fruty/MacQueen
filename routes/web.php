@@ -18,3 +18,16 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+Route::group(['namespace' => 'Frontend'], function () {
+    //safra api integration
+        Route::post('search_hotel', 'SafraController@searchHotel');
+        Route::get('/', 'SafraController@index');
+         Route::get('hotels/{id}', 'SafraController@getHotels');
+          Route::get('hotels/details/{id}', 'SafraController@getHotelDetails');
+       Route::post('search_for_hotels', 'SafraController@searchForHotelsWeb');
+      Route::get('reservations', 'SafraController@getReservations');
+      Route::post('search_hotel_by_name', 'SafraController@searchHotelByName');
+     //});
+});

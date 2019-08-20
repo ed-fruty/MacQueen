@@ -13,6 +13,12 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
+// Route::middleware('auth:api')->get('/user', function (Request $request) {
+//     return $request->user();
+// });
+
+Route::group(array('prefix' => 'v1', 'middleware' => []), function (\Illuminate\Routing\Router $a) {
+    $middleware = [ 'api'];
+    $namePrefix = 'api';
+    require base_path('routes/api/app.php');
 });
