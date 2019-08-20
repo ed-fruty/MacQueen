@@ -2,24 +2,19 @@
 
 namespace App\Nova;
 
-use Laravel\Nova\Fields\BelongsTo;
-use Laravel\Nova\Fields\Currency;
 use Laravel\Nova\Fields\ID;
 use Illuminate\Http\Request;
-use Laravel\Nova\Fields\Number;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
-class PackageHotelRoom extends Resource
+class PackageStatus extends Resource
 {
     /**
      * The model the resource corresponds to.
      *
      * @var string
      */
-    public static $model = 'App\Packages\PackageHotelRoom';
-    public  static $group='Packages';
-    public static $icon ='';
+    public static $model = 'App\Packages\PackageStatus';
 
     /**
      * The single value that should be used to represent the resource when being displayed.
@@ -47,13 +42,7 @@ class PackageHotelRoom extends Resource
     {
         return [
             ID::make()->sortable(),
-            BelongsTo::make('PackageHotel','package_hotel'),
             Text::make('name'),
-            Number::make('max_adult_no'),
-            Number::make('max_children_no'),
-            Currency::make('adult_price'),
-            Currency::make('children_price'),
-            BelongsTo::make('PackageCurrency','package_currency'),
         ];
     }
 

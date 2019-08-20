@@ -7,26 +7,25 @@ use Laravel\Nova\Fields\Currency;
 use Laravel\Nova\Fields\ID;
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\Number;
-use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
-class PackageHotelRoom extends Resource
+class UserPackageReservation extends Resource
 {
     /**
      * The model the resource corresponds to.
      *
      * @var string
      */
-    public static $model = 'App\Packages\PackageHotelRoom';
-    public  static $group='Packages';
-    public static $icon ='';
+    public static $model = 'App\Packages\UserPackageReservation';
+    public static $group='Packages';
+    public static $icon='';
 
     /**
      * The single value that should be used to represent the resource when being displayed.
      *
      * @var string
      */
-    public static $title = 'name';
+    public static $title = 'id';
 
     /**
      * The columns that should be searched.
@@ -34,7 +33,7 @@ class PackageHotelRoom extends Resource
      * @var array
      */
     public static $search = [
-        'name',
+        'id',
     ];
 
     /**
@@ -47,13 +46,14 @@ class PackageHotelRoom extends Resource
     {
         return [
             ID::make()->sortable(),
+            BelongsTo::make('User','user'),
+            BelongsTo::make('Package','package'),
             BelongsTo::make('PackageHotel','package_hotel'),
-            Text::make('name'),
-            Number::make('max_adult_no'),
-            Number::make('max_children_no'),
-            Currency::make('adult_price'),
-            Currency::make('children_price'),
             BelongsTo::make('PackageCurrency','package_currency'),
+            BelongsTo::make('PackageStatus','package_status'),
+            Currency::make('total_price')->sortable(),
+            Number::make('adults_no'),
+            Number::make('children_no'),
         ];
     }
 
