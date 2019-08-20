@@ -24,6 +24,8 @@ class Package extends Resource
      */
     public static $model = 'App\Packages\Package';
     public static $group = 'Packages';
+    public static $icon ='';
+
 
 
     /**
@@ -60,7 +62,9 @@ class Package extends Resource
             BelongsTo::make('PackageCategory'),
             Number::make('days'),
             Number::make('nights'),
-            HasMany::make('PackageInclusions','packageinclusions')
+            HasMany::make('PackageHotels','package_hotels'),
+            HasMany::make('PackageInclusions','packageinclusions'),
+            HasMany::make('PackageTypes','package_types'),
         ];
     }
 

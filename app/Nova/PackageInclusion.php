@@ -16,6 +16,8 @@ class PackageInclusion extends Resource
      */
     public static $model = 'App\Packages\PackageInclusion';
     public static $group='Packages';
+    public static $icon ='';
+
 
     /**
      * The single value that should be used to represent the resource when being displayed.

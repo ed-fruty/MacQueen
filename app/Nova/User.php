@@ -18,6 +18,8 @@ class User extends Resource
      */
     public static $model = 'App\User';
     public static $group = 'Users';
+    public static $icon ='';
+
 
 
     /**

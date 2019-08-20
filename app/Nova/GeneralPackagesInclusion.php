@@ -16,6 +16,8 @@ class GeneralPackagesInclusion extends Resource
      */
     public static $model = 'App\Packages\GeneralPackagesInclusion';
     public static $group = 'Packages';
+    public static $icon ='';
+
 
 
     /**

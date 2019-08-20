@@ -17,6 +17,8 @@ class Contact extends Resource
      * @var string
      */
     public static $model = 'App\Contact';
+    public static $icon ='';
+
 
     /**
      * The single value that should be used to represent the resource when being displayed.

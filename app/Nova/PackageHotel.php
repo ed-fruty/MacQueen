@@ -2,24 +2,26 @@
 
 namespace App\Nova;
 
+use Carbon\Carbon;
+use Laravel\Nova\Fields\BelongsTo;
+use Laravel\Nova\Fields\HasMany;
 use Laravel\Nova\Fields\ID;
 use Illuminate\Http\Request;
+use Laravel\Nova\Fields\Image;
+use Laravel\Nova\Fields\Number;
+use Laravel\Nova\Fields\Place;
 use Laravel\Nova\Fields\Text;
-use Laravel\Nova\Fields\Gravatar;
-use Laravel\Nova\Fields\Password;
+use Laravel\Nova\Fields\Trix;
+use Laravel\Nova\Http\Requests\NovaRequest;
 
-class Admin extends Resource
+class PackageHotel extends Resource
 {
     /**
      * The model the resource corresponds to.
      *
      * @var string
      */
-    public static $model = 'App\\Admin';
-    public static $group = 'Users';
-    public static $icon ='';
-
-
+    public static $model = 'App\Packages\PackageHotel';
 
     /**
      * The single value that should be used to represent the resource when being displayed.
@@ -27,13 +29,17 @@ class Admin extends Resource
      * @var string
      */
     public static $title = 'name';
+    public static $group='Packages';
+    public static $icon ='';
+
+
     /**
      * The columns that should be searched.
      *
      * @var array
      */
     public static $search = [
-        'id', 'name', 'email',
+        'name',
     ];
 
     /**
@@ -46,23 +52,19 @@ class Admin extends Resource
     {
         return [
             ID::make()->sortable(),
-
-            Gravatar::make(),
-
-            Text::make('Name')
-                ->sortable()
-                ->rules('required', 'max:255'),
-
-            Text::make('Email')
-                ->sortable()
-                ->rules('required', 'email', 'max:254')
-                ->creationRules('unique:users,email')
-                ->updateRules('unique:users,email,{{resourceId}}'),
-
-            Password::make('Password')
-                ->onlyOnForms()
-                ->creationRules('required', 'string', 'min:8')
-                ->updateRules('nullable', 'string', 'min:8'),
+            BelongsTo::make('Package','package'),
+            BelongsTo::make('GeneralPackagesType','general_package_type'),
+            Text::make('name')->sortable(),
+            Image::make('default_image')->disk('public')->path('PackageHotels/'.Carbon::now()->format('FY')),
+            BelongsTo::make('Country','country')->sortable(),
+            BelongsTo::make('City','city')->sortable(),
+            Place::make('address'),
+            Trix::make('description'),
+            Text::make('long'),
+            Text::make('lat'),
+            Number::make('rate')->rules('numeric','max:5','min:0'),
+            HasMany::make('PackageHotelImages','package_hotel_images'),
+            HasMany::make('PackageHotelAmenities','package_hotel_amenities')
         ];
     }
 
@@ -109,6 +111,4 @@ class Admin extends Resource
     {
         return [];
     }
-
-
 }

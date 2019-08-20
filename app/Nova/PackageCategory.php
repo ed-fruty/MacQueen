@@ -18,6 +18,8 @@ class PackageCategory extends Resource
      */
     public static $model = 'App\Packages\PackageCategory';
     public static $group = 'Packages';
+    public static $icon ='';
+
 
 
     /**

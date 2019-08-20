@@ -16,6 +16,8 @@ class City extends Resource
      * @var string
      */
     public static $model = 'App\City';
+    public static $icon ='';
+
 
     /**
      * The single value that should be used to represent the resource when being displayed.

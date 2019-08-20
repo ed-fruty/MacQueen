@@ -2,21 +2,22 @@
 
 namespace App\Nova;
 
+use Laravel\Nova\Fields\BelongsTo;
+use Laravel\Nova\Fields\HasMany;
 use Laravel\Nova\Fields\ID;
 use Illuminate\Http\Request;
-use Laravel\Nova\Fields\Text;
-use Laravel\Nova\Fields\Gravatar;
-use Laravel\Nova\Fields\Password;
+use Laravel\Nova\Fields\Number;
+use Laravel\Nova\Http\Requests\NovaRequest;
 
-class Admin extends Resource
+class PackageType extends Resource
 {
     /**
      * The model the resource corresponds to.
      *
      * @var string
      */
-    public static $model = 'App\\Admin';
-    public static $group = 'Users';
+    public static $model = 'App\Packages\PackageType';
+    public static $group='Packages';
     public static $icon ='';
 
 
@@ -26,14 +27,15 @@ class Admin extends Resource
      *
      * @var string
      */
-    public static $title = 'name';
+    public static $title = 'id';
+
     /**
      * The columns that should be searched.
      *
      * @var array
      */
     public static $search = [
-        'id', 'name', 'email',
+        'id',
     ];
 
     /**
@@ -46,23 +48,9 @@ class Admin extends Resource
     {
         return [
             ID::make()->sortable(),
+            BelongsTo::make('GeneralPackagesType','general_package_type'),
+            BelongsTo::make('Package','package'),
 
-            Gravatar::make(),
-
-            Text::make('Name')
-                ->sortable()
-                ->rules('required', 'max:255'),
-
-            Text::make('Email')
-                ->sortable()
-                ->rules('required', 'email', 'max:254')
-                ->creationRules('unique:users,email')
-                ->updateRules('unique:users,email,{{resourceId}}'),
-
-            Password::make('Password')
-                ->onlyOnForms()
-                ->creationRules('required', 'string', 'min:8')
-                ->updateRules('nullable', 'string', 'min:8'),
         ];
     }
 
@@ -109,6 +97,4 @@ class Admin extends Resource
     {
         return [];
     }
-
-
 }

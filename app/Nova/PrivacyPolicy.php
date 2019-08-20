@@ -16,6 +16,8 @@ class PrivacyPolicy extends Resource
      */
     public static $model = 'App\PrivacyPolicy';
     public static $group = 'Static Pages';
+    public static $icon ='';
+
 
 
     /**
