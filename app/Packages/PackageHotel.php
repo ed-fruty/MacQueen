@@ -40,5 +40,7 @@ class PackageHotel extends Model
     }
     public function package_hotel_amenities(){
         return $this->hasMany(PackageHotelAmenity::class,'package_hotel_id');
+    }  public function package_hotel_rooms(){
+        return $this->hasMany(PackageHotelRoom::class,'package_hotel_id');
     }
 }

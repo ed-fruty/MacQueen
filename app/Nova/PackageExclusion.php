@@ -2,36 +2,29 @@
 
 namespace App\Nova;
 
-use Carbon\Carbon;
 use Laravel\Nova\Fields\BelongsTo;
-use Laravel\Nova\Fields\HasMany;
 use Laravel\Nova\Fields\ID;
 use Illuminate\Http\Request;
-use Laravel\Nova\Fields\Image;
-use Laravel\Nova\Fields\Number;
-use Laravel\Nova\Fields\Place;
 use Laravel\Nova\Fields\Text;
-use Laravel\Nova\Fields\Trix;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
-class PackageHotel extends Resource
+class PackageExclusion extends Resource
 {
     /**
      * The model the resource corresponds to.
      *
      * @var string
      */
-    public static $model = 'App\Packages\PackageHotel';
+    public static $model = 'App\Packages\PackageExclusion';
+    public static $group='Packages';
+    public static $icon='';
 
     /**
      * The single value that should be used to represent the resource when being displayed.
      *
      * @var string
      */
-    public static $title = 'name';
-    public static $group='Packages';
-    public static $icon ='';
-
+    public static $title = 'id';
 
     /**
      * The columns that should be searched.
@@ -39,7 +32,7 @@ class PackageHotel extends Resource
      * @var array
      */
     public static $search = [
-        'name',
+        'id',
     ];
 
     /**
@@ -53,19 +46,7 @@ class PackageHotel extends Resource
         return [
             ID::make()->sortable(),
             BelongsTo::make('Package','package'),
-            BelongsTo::make('GeneralPackagesType','general_package_type'),
-            Text::make('name')->sortable(),
-            Image::make('default_image')->disk('public')->path('PackageHotels/'.Carbon::now()->format('FY')),
-            BelongsTo::make('Country','country')->sortable(),
-            BelongsTo::make('City','city')->sortable(),
-            Place::make('address'),
-            Trix::make('description'),
-            Text::make('long'),
-            Text::make('lat'),
-            Number::make('rate')->rules('numeric','max:5','min:0'),
-            HasMany::make('PackageHotelImages','package_hotel_images'),
-            HasMany::make('PackageHotelAmenities','package_hotel_amenities'),
-            HasMany::make('PackageHotelRooms','package_hotel_rooms'),
+            BelongsTo::make('GeneralPackagesExclusion','general_packages_exclusion'),
         ];
     }
 

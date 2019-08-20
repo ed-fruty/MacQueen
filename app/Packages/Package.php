@@ -38,5 +38,9 @@ class Package extends Model
     public function package_hotels(){
         return $this->hasMany(PackageHotel::class,'package_id');
     }
+    public function package_exclusions(){
+        return $this->hasMany(PackageExclusion::class,'package_id');
+    }
+
 
 }
