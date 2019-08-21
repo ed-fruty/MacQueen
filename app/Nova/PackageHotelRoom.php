@@ -19,7 +19,7 @@ class PackageHotelRoom extends Resource
      */
     public static $model = 'App\Packages\PackageHotelRoom';
     public  static $group='Packages';
-    public static $icon ='';
+    public static $icon ='<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAA8UlEQVRIx2NgGAXUAr7rAn181gecAuIvINp7bZA3tQ3/D8KnX5z5D2P7rg8IoIoF3usDTsMMXXBlEdwCID5JFQuABn2CGQoCSBZ8oroP0Cygjg9AEYrVgg3+XkQb8n8Gw38wns7QgMeSk0D8GUyTYjgxFlAMkC34v8PP+/923yf/t/s9/r/N15P6FoAM3u77H4ofzdZY3zBHfcN/IvGfOWob5tPSArAl+C0ABgvUkkfA4PIgw4L/OC34sLr4/8N9z1HwvuLT/6lmwY+FlmBLkPGj7vT/5+IjiMbnE0O+4Q4iKuEBtICCjAZOIANmwSjABQA8qAxwWHKiggAAAABJRU5ErkJggg==">';
 
     /**
      * The single value that should be used to represent the resource when being displayed.

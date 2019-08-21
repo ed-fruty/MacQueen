@@ -17,7 +17,7 @@ class Admin extends Resource
      */
     public static $model = 'App\\Admin';
     public static $group = 'Users';
-    public static $icon ='';
+    public static $icon ='<img src="https://img.icons8.com/color/24/000000/group-foreground-selected.png">';
 
 
 

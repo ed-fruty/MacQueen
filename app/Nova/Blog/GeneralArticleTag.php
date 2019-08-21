@@ -17,7 +17,7 @@ class GeneralArticleTag extends Resource
      */
     public static $model = 'App\Blog\GeneralArticleTag';
     public static $group='Blog';
-    public static $icon='';
+    public static $icon='<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAABdElEQVRIx2NgGHHg/yGOmP8H2cqxY/aS/wdZDck3/CBHA9CQ/wTwr//7WQ2obDjbm/8H2PuAat5C+RXUdnkPRB17P9SCeioHC9AHYMM53pFkAZFhjs3CehoaToQFlBlOwALKDcdjASmG/9vK/f/3RIn/v9pkwfS/bdxI8hzxmIbv53AhyvAD7P9/tcr9/+Ju8v+LsxkCA/kgy3C7/gB7ETEWgA0HG2iFZgGcX4bdgr0c8kAD3hMKFrDLgYb9OXn0/681y8GGgmgQH2rJty/O5uI4CjJWI0R2x8S/J0rCXfxr+YL/IPD3xjUwDbMMiuPxlJa4LYEHDxT/vXYZYsntG/+/uJgjyZlXEiiSsVsCSi0IHyyE+uAqwgcwS1zM4ogo9zEtASVFYuLgs5uVGJGVC6YloKSINxW5mJWSWIOxmqGkrv1s9aCkCEktZsiWfPviZF5CXk12hFPu/yH2wv8HOBxhYqCkCEotX5zMykFhTnSwDDkAAFLsIvBF5behAAAAAElFTkSuQmCC">';
 
 
     /**

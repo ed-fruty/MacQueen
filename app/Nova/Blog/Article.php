@@ -22,7 +22,7 @@ class Article extends Resource
      */
     public static $model = 'App\Blog\Article';
     public static $group='Blog';
-    public static $icon='';
+    public static $icon='<img src="https://img.icons8.com/color/24/000000/paper.png">';
 
     /**
      * The single value that should be used to represent the resource when being displayed.

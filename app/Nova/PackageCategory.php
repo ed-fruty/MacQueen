@@ -18,7 +18,7 @@ class PackageCategory extends Resource
      */
     public static $model = 'App\Packages\PackageCategory';
     public static $group = 'Packages';
-    public static $icon ='';
+    public static $icon ='<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAABFUlEQVRIx2NgoDeYcPJnObG4//h3BdItOPXzPzF4yZXf/yef/vmo//QPJZpYsPPB7/+nX/75P+UMiZaQYsHDr/9It4RUC0i2hBwL4Jac/fmAahbgwoPLgtAFT+E0PjxqAe0tiFz8HCduOfSNcgsC5j7Bikt3fPhfsffQ/7BVxf/dFvmDsfMC9/1O8918KfJB9NIX//tO/vifvnkWyEDseL57K9k+SFn9CuxyZANhAMWShW4+ZPmg48g3cLAQtGCB+z6yfNBz/Pt/90UBKAajA6gFn8guKoi04CPZFoStJiKIFnrsJduCyr2HCVrgssDdG9OC0z87iMWx65qO4UqmTgvcmqnSCgElRVBqAeLPYAwMFmSXAwD9Y3273XId6QAAAABJRU5ErkJggg==">';
 
 
 

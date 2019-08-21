@@ -30,7 +30,7 @@ class PackageHotel extends Resource
      */
     public static $title = 'name';
     public static $group='Packages';
-    public static $icon ='';
+    public static $icon ='<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAA10lEQVRIx2NgGFZAruuJj1z703JcWL7jaYlM32Mh8i3oePoDiP/jx88qKLEAbIhYxmEwBrEdZr/+H7z8HRynbfy4e8LJn+W4cP/JH94ELeB1XwjGIHbviR//J5z6SQr+QZIPSDQcjAlagIxhmkRTD4AxiB084w6YDaLR5YiyADmI6GYBzYMI5FqYiws3vAazQTS6HFEWYItkmgcRzX1AlTiQrrlxBB1TNYikyi42oGOqWoANUDWI8FlAlUjGZwHNg4hmPija++0IqZgkC1K2fm0gFQ+vhgQAbwV3AO9KYT8AAAAASUVORK5CYII=">';
 
 
     /**

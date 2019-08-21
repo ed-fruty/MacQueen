@@ -23,7 +23,7 @@ class GeneralPackagesType extends Resource
      */
     public static $title = 'name';
     public static $group='Packages';
-    public static $icon ='';
+    public static $icon ='<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAABsUlEQVRIia2Tz0oCURSHp+gVWrfqPQLfooXmulaGmruBpAxbVZDlTDFgJURomX9IMyVHU3QYKwoSLYpq0SKKogj0NFcQRufOeEc98EPF6/m835xDUbKaczOgM1c0TQ9TpIV+tL4bgmi6oBl0RgYRKYAhYkCcL0G3QmfQ2cBJpvlqd3tLRBC9gIb0/jCRbd2kOHAAqnYIWxg4oBMi6eIHBlBL34DKw7PmdPUN6HYzYsATx0HOYNDUIj+fLFzCiu+IHPAhik0ITksknQcuFoad8zAcl1PAVwSIXhSBv671ryhfK4PFvwhGxtYWE2sHZ5AB85ZjtGdF06tLisaY3E8ys2O6FFUfX4CJBRXNFsIeCAhxHESYoOkRYkX1Rh2rBTVHhbuJyWszEyvyxaPYJloAKQliRXuZiEILyu1rtfl963OHrjdiRSHxTPGv1UoG+CEGoDnvQdEdMeD9+7M557oeMmtd07VoGym/HsDf1LZ1XAHAxbHMQiRbhlPxBmZ8TpJFAyNrt+AWzaUW1+a+5yCZz3GxhDDNzX+pNZY0NrDN9RTaULREaM7RKEr5RQ8UOe/U8g9uy1FHe2YnUAAAAABJRU5ErkJggg==">';
 
 
     /**
