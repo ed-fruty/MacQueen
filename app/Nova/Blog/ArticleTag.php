@@ -6,19 +6,19 @@ use App\Nova\Resource;
 use Laravel\Nova\Fields\BelongsTo;
 use Laravel\Nova\Fields\ID;
 use Illuminate\Http\Request;
-use Laravel\Nova\Fields\Text;
-use Laravel\Nova\Fields\Trix;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
-class Blog extends Resource
+class ArticleTag extends Resource
 {
     /**
      * The model the resource corresponds to.
      *
      * @var string
      */
-    public static $model = 'App\Blog\Blog';
+    public static $model = 'App\Blog\ArticleTag';
     public static $group='Blog';
+    public static $icon='';
+
 
     /**
      * The single value that should be used to represent the resource when being displayed.
@@ -46,9 +46,8 @@ class Blog extends Resource
     {
         return [
             ID::make()->sortable(),
-            Text::make('title'),
-            Trix::make('description'),
-            BelongsTo::make('BlogCategory','blog_category')->sortable(),
+            BelongsTo::make('Article','article'),
+            BelongsTo::make('GeneralArticleTag','general_article_tag'),
         ];
     }
 

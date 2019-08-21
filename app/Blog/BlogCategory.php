@@ -9,6 +9,7 @@ class BlogCategory extends Model
     protected $fillable=[
         'name'
     ];
-
-
+    public function articles(){
+        return $this->hasMany(Article::class,'blog_category_id');
+    }
 }

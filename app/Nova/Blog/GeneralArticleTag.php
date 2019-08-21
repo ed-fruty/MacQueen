@@ -3,28 +3,29 @@
 namespace App\Nova\Blog;
 
 use App\Nova\Resource;
-use Laravel\Nova\Fields\BelongsTo;
 use Laravel\Nova\Fields\ID;
 use Illuminate\Http\Request;
+use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
-class BlogTag extends Resource
+class GeneralArticleTag extends Resource
 {
     /**
      * The model the resource corresponds to.
      *
      * @var string
      */
-    public static $model = 'App\Blog\BlogTag';
+    public static $model = 'App\Blog\GeneralArticleTag';
     public static $group='Blog';
     public static $icon='';
+
 
     /**
      * The single value that should be used to represent the resource when being displayed.
      *
      * @var string
      */
-    public static $title = 'id';
+    public static $title = 'name';
 
     /**
      * The columns that should be searched.
@@ -32,7 +33,7 @@ class BlogTag extends Resource
      * @var array
      */
     public static $search = [
-        'id',
+        'name',
     ];
 
     /**
@@ -45,8 +46,7 @@ class BlogTag extends Resource
     {
         return [
             ID::make()->sortable(),
-            BelongsTo::make('Blog','blog')->sortable(),
-            BelongsTo::make('GeneralBlogTag','general_blog_tag')->sortable(),
+            Text::make('name')->sortable(),
         ];
     }
 

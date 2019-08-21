@@ -3,6 +3,7 @@
 namespace App\Nova\Blog;
 
 use App\Nova\Resource;
+use Laravel\Nova\Fields\HasMany;
 use Laravel\Nova\Fields\ID;
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\Text;
@@ -17,13 +18,14 @@ class BlogCategory extends Resource
      */
     public static $model = 'App\Blog\BlogCategory';
     public static $group='Blog';
+    public static $icon='';
 
     /**
      * The single value that should be used to represent the resource when being displayed.
      *
      * @var string
      */
-    public static $title = 'id';
+    public static $title = 'name';
 
     /**
      * The columns that should be searched.
@@ -31,7 +33,7 @@ class BlogCategory extends Resource
      * @var array
      */
     public static $search = [
-        'id',
+        'name',
     ];
 
     /**
@@ -45,6 +47,7 @@ class BlogCategory extends Resource
         return [
             ID::make()->sortable(),
             Text::make('name'),
+            HasMany::make('Article','articles')
         ];
     }
 

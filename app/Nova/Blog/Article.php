@@ -3,19 +3,24 @@
 namespace App\Nova\Blog;
 
 use App\Nova\Resource;
+use Carbon\Carbon;
+use Laravel\Nova\Fields\BelongsTo;
+use Laravel\Nova\Fields\BelongsToMany;
 use Laravel\Nova\Fields\ID;
 use Illuminate\Http\Request;
+use Laravel\Nova\Fields\Image;
 use Laravel\Nova\Fields\Text;
+use Laravel\Nova\Fields\Trix;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
-class GeneralBlogTag extends Resource
+class Article extends Resource
 {
     /**
      * The model the resource corresponds to.
      *
      * @var string
      */
-    public static $model = 'App\Blog\GeneralBlogTag';
+    public static $model = 'App\Blog\Article';
     public static $group='Blog';
     public static $icon='';
 
@@ -24,7 +29,7 @@ class GeneralBlogTag extends Resource
      *
      * @var string
      */
-    public static $title = 'name';
+    public static $title = 'title';
 
     /**
      * The columns that should be searched.
@@ -32,7 +37,7 @@ class GeneralBlogTag extends Resource
      * @var array
      */
     public static $search = [
-        'name',
+        'title',
     ];
 
     /**
@@ -45,7 +50,11 @@ class GeneralBlogTag extends Resource
     {
         return [
             ID::make()->sortable(),
-            Text::make('name'),
+            BelongsTo::make('BlogCategory','blog_category'),
+            Image::make('image')->disk('public')->path('Blogs'.Carbon::now()->format('FY'))->rules('nullable'),
+            Text::make('video_link')->rules('nullable'),
+            Text::make('title')->sortable(),
+            Trix::make('description'),
         ];
     }
 
