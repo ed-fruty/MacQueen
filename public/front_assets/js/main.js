@@ -98,11 +98,35 @@ jQuery(function($){
         });
         /*Book tour hotel datepicker*/
         if($(".find-hotel-widget .tb-input").length) {
+            var date = new Date();
+            var today = new Date(date.getFullYear(), date.getMonth(), date.getDate());
             // DATE PICKER
-            $('.input-daterange, .date .tb-input').datepicker({
-                format: 'mm/dd/yy',
-                maxViewMode: 0,
-                autoclose: true
+            $('.input-daterange input').each(function() {
+                $(this).datepicker({
+                    format: 'mm/dd/yy',
+                    maxViewMode: 0,
+                    autoclose: true,
+                    startDate: today,
+                    todayHighlight: true
+                });
+            });
+            $('#fromDate').on('changeDate', function(selected) {
+                // see if the second picker has a date selected
+                var toDate = $('#toDate').datepicker('getDate');
+                var d = new Date(selected.date);
+                d.setDate(d.getDate() + 1);
+                console.log(d);
+                if (toDate) {
+                    // if it is before the first date, set to the value of the first date
+                    if (selected.date.valueOf() > toDate.valueOf()) {
+                        $('#fromDate').datepicker('setDate', selected.date);
+                    }
+                }
+                // sets the start date on the second picker
+                $('#toDate').datepicker('setStartDate', d);
+            });
+            $('#fromDate').on('clearDate', function() {
+                $('#toDate').datepicker('clearDates');
             });
         }
     };
@@ -342,5 +366,55 @@ jQuery(function($){
     /*======================================
     =          END INIT FUNCTIONS          =
     ======================================*/
-
+    //more options
+    $('select#selectRoom').on('change', function (e) {
+        var optionSelected = $("option:selected", this);
+        var valueSelected = this.value;
+        //console.log(valueSelected);
+        if(valueSelected === "more"){
+            $('.moreOptions').toggle();
+        }
+    });
+    //add children age
+    function chooseAge(){
+        $('select.childNum').on('change', function (e) {
+                //var optionSelected = $("option:selected", this);
+                //var valueSelected = this.value;
+                //var $option = $(this).find('option:selected');
+                //Added with the EDIT
+                var valueSelected = $(this).next().find('.sbSelector').html();
+                console.log(valueSelected);
+                $(this).parents('.addedRoom').find('.childrenAge').html('');
+                var html = '<div class="select-wrapper"><select class="form-control custom-select selectbox"><option selected="selected">1</option><option>2</option><option>3</option><option>4</option></select></div>';
+                console.log(valueSelected);
+                for (let i = 0; i < valueSelected; i++) {
+                    $(this).parents('.addedRoom').find('.childrenAge').append(html);
+                    $(this).parents('.addedRoom').find('.childrenAge .selectbox').selectbox();
+                }
+            });
+    }
+    //add another room
+    $('#addRoom').on('click',function(){
+        var rooms = $('.rooms .addedRoom').length;
+        if(rooms < 5){
+            var getHtml = $('.rooms .addedRoom.hidden').html();
+            var roomNum = Number($('.rooms .addedRoom:last-child #roomNum').html());
+            $('.rooms').append('<div class="addedRoom">'+getHtml+'</div>');
+            $('.rooms .addedRoom:last-child #roomNum').html(roomNum + 1);
+            $('.rooms .addedRoom:last-child').find("select").each(function(){
+                $(this).selectbox();
+            });
+            chooseAge();
+            return false;
+        }
+        else{
+            return false;
+        }
+    });
+    //remove room
+    $(document).on('click','#removeRoom',function(){
+        $(this).parents('.addedRoom').remove();
+        return false;
+    });
+    chooseAge();
 });

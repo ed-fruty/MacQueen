@@ -61,7 +61,54 @@ jQuery(function($){
                 }
             ]
         });
-
+        $(window).on('load', function() { 
+            $('.hotel-prev').slick({
+                slidesToShow: 1,
+                centerMode: true,
+                arrows: false,
+                dots: false,
+                autoplay: true,
+                autoplaySpeed: 5000,
+                adaptiveHeight: true
+            });
+            $('.slider-for.group-hotel').slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows: false,
+                fade: true,
+                asNavFor: '.slider-nav.group-hotel'
+            });
+            $('.slider-nav.group-hotel').slick({
+                slidesToShow: 5,
+                slidesToScroll: 1,
+                asNavFor: '.slider-for.group-hotel',
+                arrows: false,
+                centerMode: true,
+                focusOnSelect: true,
+                responsive: [
+                    {
+                        breakpoint: 1201,
+                        settings: {
+                            slidesToShow: 4,
+                            slidesToScroll: 1
+                        }
+                    },
+                    {
+                        breakpoint: 381,
+                        settings: {
+                            slidesToShow: 3,
+                            slidesToScroll: 1
+                        }
+                    },
+                ]
+            });
+        });
+        $('#hotelModal').on('shown.bs.modal', function () {
+            $(".slider-nav.group-hotel").slick('refresh');
+            $(".slider-for.group-hotel").slick('refresh');
+            $(window).trigger('resize');
+            $('.slick-active.slick-center img').prev().trigger('click');
+        });
         $('.slider-for.group1').slick({
             slidesToShow: 1,
             slidesToScroll: 1,

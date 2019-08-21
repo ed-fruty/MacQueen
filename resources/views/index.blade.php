@@ -131,84 +131,51 @@
             <div class="wrapper-content">
                 <!-- HEADER-->
                 <header>
-                    <div class="bg-transparent header-01">
+                    <div class="bg-white header-03">
                         <div class="header-topbar">
                             <div class="container">
-                                <ul class="topbar-left list-unstyled list-inline pull-left">
-                                    <li>
-                                        <a href="javascript:void(0)" class="country dropdown-text">
-                                            <span>Country</span>
-                                            <i class="topbar-icon icons-dropdown fa fa-angle-down"></i>
+                                <div class="row">
+                                    <div class="col-xs-4 topbar-left">
+                                        <div class="btn-menu">
+                                            <i class="icons fa fa-align-left"></i>
+                                            <p class="text">menu</p>
+                                        </div>
+                                        <div class="hamburger-menu">
+                                            <div class="hamburger-menu-wrapper">
+                                                <div class="icons"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-4 topbar-center">
+                                        <a href="index.html" class="header-logo logo-black">
+                                            <img src="assets/images/logo/logo-black-color-1.png" alt="" />
                                         </a>
-                                        <ul class="dropdown-topbar list-unstyled hide">
+                                    </div>
+                                    <div class="col-xs-4 topbar-right">
+                                        <ul class="list-unstyled list-inline login-widget">
                                             <li>
-                                                <a href="#" class="link">Vietnam</a>
+                                                <a href="sign-up.html" class="item">login</a>
                                             </li>
                                             <li>
-                                                <a href="#" class="link">Japan</a>
+                                                <a href="register.html" class="item">register</a>
                                             </li>
-                                            <li>
-                                                <a href="#" class="link">Korea</a>
+                                            <li class="search">
+                                                <a href="register.html" class="item">
+                                                    <i class="icons fa fa-search"></i>
+                                                </a>
                                             </li>
                                         </ul>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0)" class="language dropdown-text">
-                                            <span>English</span>
-                                            <i class="topbar-icon icons-dropdown fa fa-angle-down"></i>
-                                        </a>
-                                        <ul class="dropdown-topbar list-unstyled hide">
-                                            <li>
-                                                <a href="#" class="link">Vietnam</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="link">Japan</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="link">Korea</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0)" class="monney dropdown-text">
-                                            <span>USD</span>
-                                            <i class="topbar-icon icons-dropdown fa fa-angle-down"></i>
-                                        </a>
-                                        <ul class="dropdown-topbar list-unstyled hide">
-                                            <li>
-                                                <a href="#" class="link">VND</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="link">Euro</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="link">JPY</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                                <ul class="topbar-right pull-right list-unstyled list-inline login-widget">
-                                    <li>
-                                        <a href="sign-up.html" class="item">login</a>
-                                    </li>
-                                    <li>
-                                        <a href="register.html" class="item">register</a>
-                                    </li>
-                                </ul>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="header-main">
                             <div class="container">
                                 <div class="header-main-wrapper">
-                                    <div class="hamburger-menu">
-                                        <div class="hamburger-menu-wrapper">
-                                            <div class="icons"></div>
-                                        </div>
-                                    </div>
                                     <div class="navbar-header">
                                         <div class="logo">
-                                            <a href="index.html" class="header-logo">
-                                                <img src="assets/images/logo/logo-white-color-1.png" alt="" />
+                                            <a href="index.html" class="header-logo logo-black">
+                                                <img src="assets/images/logo/logo-black-color-1.png" alt="" />
                                             </a>
                                         </div>
                                     </div>
@@ -348,570 +315,285 @@
                 <div id="wrapper-content">
                     <!-- MAIN CONTENT-->
                     <div class="main-content">
-                        <section class="page-banner homepage-default">
+                        <section class="page-banner-2 homepage-03">
                             <div class="container">
-                                <div class="homepage-banner-warpper">
-                                    <div class="homepage-banner-content">
-                                        <div class="group-title">
-                                            <h1 class="title">discover</h1>
-                                            <p class="text">The world you have never seen
-                                                <span class="boder"></span>
-                                            </p>
-                                        </div>
-                                        <div class="group-btn">
-                                            <a href="#" data-hover="CLICK ME" class="btn-click">
-                                                <span class="text">go explore now</span>
-                                                <span class="icons fa fa-long-arrow-right"></span>
+                                <h1 class="banner">HOW DO YOU MOVE?</h1>
+                                <h4 class="sub-banner">Explore&nbsp;/ Embrace&nbsp;/ Learn&nbsp;/ Live</h4>
+                                <div class="tab-search tab-search-long tab-search-transparent">
+                                    <ul role="tablist" class="nav nav-tabs">
+                                        <li role="presentation" class="tab-btn-wrapper active">
+                                            <a href="#hotel" aria-controls="hotel" role="tab" data-toggle="tab" class="tab-btn">
+                                                <i class="flaticon-three"></i>
+                                                <span>HOTEL</span>
                                             </a>
+                                        </li>
+                                        <li role="presentation" class="tab-btn-wrapper">
+                                            <a href="#tours" aria-controls="tours" role="tab" data-toggle="tab" class="tab-btn">
+                                                <i class="flaticon-people"></i>
+                                                <span>TOURS</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <div class="tab-content">
+                                        <div role="tabpanel" id="hotel" class="tab-pane fade in active">
+                                            <div class="find-widget find-hotel-widget widget">
+                                                <h4 class="title-widgets">FIND HOTEL</h4>
+                                                <form class="content-widget">
+                                                    <div class="text-input small-margin-top">
+                                                        <div class="place text-box-wrapper">
+                                                            <label class="tb-label">Where do you want to go?</label>
+                                                            <div class="input-group">
+                                                                <input type="text" placeholder="Write the place" class="tb-input">
+                                                            </div>
+                                                        </div>
+                                                        <div class="input-daterange">
+                                                            <div class="text-box-wrapper half">
+                                                                <label class="tb-label">Check in</label>
+                                                                <div class="input-group">
+                                                                    <input type="text" placeholder="MM/DD/YY" class="tb-input" id="fromDate">
+                                                                    <i class="tb-icon fa fa-calendar input-group-addon"></i>
+                                                                </div>
+                                                            </div>
+                                                            <div class="text-box-wrapper half">
+                                                                <label class="tb-label">Check out</label>
+                                                                <div class="input-group">
+                                                                    <input type="text" placeholder="MM/DD/YY" class="tb-input" id="toDate">
+                                                                    <i class="tb-icon fa fa-calendar input-group-addon"></i>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="roomcount room-count text-box-wrapper">
+                                                            <label class="tb-label">Rooms</label>
+                                                            <div class="select-wrapper">
+                                                                <!--i.fa.fa-chevron-down-->
+                                                                <select class="form-control custom-select selectbox" id="selectRoom">
+                                                                    <option selected="selected">1</option>
+                                                                    <option>2</option>
+                                                                    <option>3</option>
+                                                                    <option>4</option>
+                                                                    <option id="moreOption" value="more">More Options</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <button type="submit" data-hover="SEARCH NOW" class="btn btn-slide">
+                                                            <span class="text">SEARCH NOW</span>
+                                                            <span class="icons fa fa-long-arrow-right"></span>
+                                                        </button>  
+                                                    </div>
+                                                    <div class="moreOptions">
+                                                        <div class="rooms">
+                                                            <div class="addedRoom hidden">
+                                                                    <div class="row">
+                                                                        <div class="col-md-3">
+                                                                            <div class="text-box-wrapper">
+                                                                                <label class="tb-label">room <span id="roomNum">1</span></label>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-md-3">
+                                                                            <div class="text-box-wrapper">
+                                                                                <label class="tb-label">adults(+12 years)</label>
+                                                                                <div class="select-wrapper">
+                                                                                    <select class="form-control custom-select">
+                                                                                        <option selected="selected">1</option>
+                                                                                        <option>2</option>
+                                                                                        <option>3</option>
+                                                                                        <option>4</option>
+                                                                                    </select>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-md-3">
+                                                                            <div class="text-box-wrapper">
+                                                                                <label class="tb-label">children (1 - 11 years)</label>
+                                                                                <div class="select-wrapper">
+                                                                                    <select class="form-control custom-select childNum">
+                                                                                        <option selected="selected" value="0">0</option>
+                                                                                        <option value="1">1</option>
+                                                                                        <option value="2">2</option>
+                                                                                    </select>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-md-3">
+                                                                            <div class="text-box-wrapper">
+                                                                                <label class="tb-label">children age</label>
+                                                                                <div class="childrenAge"></div>
+                                                                            </div>
+                                                                            <div class="text-right">
+                                                                                <button id="removeRoom"><i class="fa fa-minus"></i></button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            <div class="addedRoom">
+                                                                <div class="row">
+                                                                    <div class="col-md-3">
+                                                                        <div class="text-box-wrapper">
+                                                                            <label class="tb-label">room <span id="roomNum">1</span></label>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-3">
+                                                                        <div class="text-box-wrapper">
+                                                                            <label class="tb-label">adults(+12 years)</label>
+                                                                            <div class="select-wrapper">
+                                                                                <select class="form-control custom-select selectbox">
+                                                                                    <option selected="selected">1</option>
+                                                                                    <option>2</option>
+                                                                                    <option>3</option>
+                                                                                    <option>4</option>
+                                                                                </select>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-3">
+                                                                        <div class="text-box-wrapper">
+                                                                            <label class="tb-label">children (1 - 11 years)</label>
+                                                                            <div class="select-wrapper">
+                                                                                <select class="form-control custom-select selectbox childNum">
+                                                                                    <option selected="selected" value="0">0</option>
+                                                                                    <option value="1">1</option>
+                                                                                    <option value="2">2</option>
+                                                                                </select>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-3">
+                                                                        <div class="text-box-wrapper">
+                                                                            <label class="tb-label">children age</label>
+                                                                            <div class="childrenAge"></div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-xs-12 text-right">
+                                                                <h5 class="addRoom">add new room (4 max)</h5>
+                                                                <button id="addRoom"><i class="fa fa-plus"></i></button>
+                                                            </div>
+                                                        </div>
+                                                    </div> 
+                                                </form> 
+                                            </div>
+                                        </div>
+                                        <div role="tabpanel" id="tours" class="tab-pane fade">
+                                            <div class="find-widget find-tours-widget widget">
+                                                <h4 class="title-widgets">FIND TOURS</h4>
+                                                <form class="content-widget">
+                                                    <div class="text-input small-margin-top">
+                                                        <div class="place text-box-wrapper">
+                                                            <label class="tb-label">Where do you want to go?</label>
+                                                            <div class="input-group">
+                                                                <input type="text" placeholder="Write the place" class="tb-input">
+                                                            </div>
+                                                        </div>
+                                                        <div class="date text-box-wrapper">
+                                                            <label class="tb-label">When do you want to go?</label>
+                                                            <div class="input-group">
+                                                                <input type="text" placeholder="MM/DD/YY" class="tb-input">
+                                                                <i class="tb-icon fa fa-calendar input-group-addon"></i>
+                                                            </div>
+                                                        </div>
+                                                        <div class="count adult-count text-box-wrapper">
+                                                            <label class="tb-label">Adult</label>
+                                                            <div class="select-wrapper">
+                                                                <!--i.fa.fa-chevron-down-->
+                                                                <select class="form-control custom-select selectbox">
+                                                                    <option selected="selected">1</option>
+                                                                    <option>2</option>
+                                                                    <option>3</option>
+                                                                    <option>4</option>
+                                                                    <option>5</option>
+                                                                    <option>6</option>
+                                                                    <option>7</option>
+                                                                    <option>8</option>
+                                                                    <option>9</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="count child-count text-box-wrapper">
+                                                            <label class="tb-label">Child</label>
+                                                            <div class="select-wrapper">
+                                                                <!--i.fa.fa-chevron-down-->
+                                                                <select class="form-control custom-select selectbox">
+                                                                    <option selected="selected">0</option>
+                                                                    <option>1</option>
+                                                                    <option>2</option>
+                                                                    <option>3</option>
+                                                                    <option>4</option>
+                                                                    <option>5</option>
+                                                                    <option>6</option>
+                                                                    <option>7</option>
+                                                                    <option>8</option>
+                                                                    <option>9</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <button type="submit" data-hover="SEARCH NOW" class="btn btn-slide">
+                                                            <span class="text">SEARCH NOW</span>
+                                                            <span class="icons fa fa-long-arrow-right"></span>
+                                                        </button>
+                                                    </div>
+                                                </form>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </section>
-                        <section>
-                            <div class="tab-search tab-search-long tab-search-default">
-                                <div class="container">
-                                    <div class="row">
-                                        <div class="col-xs-12">
-                                            <ul role="tablist" class="nav nav-tabs">
-                                                <li role="presentation" class="tab-btn-wrapper active">
-                                                    <a href="#flight" aria-controls="flight" role="tab" data-toggle="tab" class="tab-btn">
-                                                        <i class="flaticon-transport-1"></i>
-                                                        <span class="text">FLIGHT</span>
-                                                        <span class="xs">FIND YOUR FLIGHT</span>
-                                                    </a>
-                                                </li>
-                                                <li role="presentation" class="tab-btn-wrapper">
-                                                    <a href="#transfer" aria-controls="transfer" role="tab" data-toggle="tab" class="tab-btn">
-                                                        <i class="flaticon-transport-3"></i>
-                                                        <span class="text">TRANSFER</span>
-                                                        <span class="xs">FIND TRANSFER</span>
-                                                    </a>
-                                                </li>
-                                                <li role="presentation" class="tab-btn-wrapper">
-                                                    <a href="#hotel" aria-controls="hotel" role="tab" data-toggle="tab" class="tab-btn">
-                                                        <i class="flaticon-three"></i>
-                                                        <span class="text">HOTEL</span>
-                                                        <span class="xs">FIND HOTEL</span>
-                                                    </a>
-                                                </li>
-                                                <li role="presentation" class="tab-btn-wrapper">
-                                                    <a href="#tours" aria-controls="tours" role="tab" data-toggle="tab" class="tab-btn">
-                                                        <i class="flaticon-people"></i>
-                                                        <span class="text">TOURS</span>
-                                                        <span class="xs">FIND TOURS</span>
-                                                    </a>
-                                                </li>
-                                                <li role="presentation" class="tab-btn-wrapper">
-                                                    <a href="#car-rent" aria-controls="car-rent" role="tab" data-toggle="tab" class="tab-btn">
-                                                        <i class="flaticon-transport-7"></i>
-                                                        <span class="text">CAR RENT</span>
-                                                        <span class="xs">FIND CAR RENT</span>
-                                                    </a>
-                                                </li>
-                                                <li role="presentation" class="tab-btn-wrapper">
-                                                    <a href="#cruises" aria-controls="cruises" role="tab" data-toggle="tab" class="tab-btn">
-                                                        <i class="flaticon-transport-4"></i>
-                                                        <span class="text">CRUISES</span>
-                                                        <span class="xs">FIND CRUISES</span>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="tab-content-bg">
-                                    <div class="container">
-                                        <div class="row">
-                                            <div class="col-xs-12">
-                                                <div class="tab-content">
-                                                    <div role="tabpanel" id="flight" class="tab-pane fade in active">
-                                                        <div class="find-widget find-flight-widget widget">
-                                                            <h4 class="title-widgets">FIND YOUR FLIGHT</h4>
-                                                            <form class="content-widget">
-                                                                <div class="ffw-radio-selection">
-                                                                    <span class="ffw-radio-btn-wrapper">
-                                                                        <input type="radio" name="flight type" value="one way" id="flight-type-1" checked="checked" class="ffw-radio-btn">
-                                                                        <label for="flight-type-1" class="ffw-radio-label">One Way</label>
-                                                                    </span>
-                                                                    <span class="ffw-radio-btn-wrapper">
-                                                                        <input type="radio" name="flight type" value="round trip" id="flight-type-2" class="ffw-radio-btn">
-                                                                        <label for="flight-type-2" class="ffw-radio-label">Round Trip</label>
-                                                                    </span>
-                                                                    <span class="ffw-radio-btn-wrapper">
-                                                                        <input type="radio" name="flight type" value="multiple cities" id="flight-type-3" class="ffw-radio-btn">
-                                                                        <label for="flight-type-3" class="ffw-radio-label">Multiple Cities</label>
-                                                                    </span>
-                                                                    <div class="stretch">&nbsp;</div>
-                                                                </div>
-                                                                <div class="text-input small-margin-top">
-                                                                    <div class="place text-box-wrapper">
-                                                                        <label class="tb-label">Where do you want to go?</label>
-                                                                        <div class="input-group">
-                                                                            <input type="text" placeholder="Write the place" class="tb-input">
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="input-daterange">
-                                                                        <div class="text-box-wrapper half">
-                                                                            <label class="tb-label">Check in</label>
-                                                                            <div class="input-group">
-                                                                                <input type="text" placeholder="MM/DD/YY" class="tb-input">
-                                                                                <i class="tb-icon fa fa-calendar input-group-addon"></i>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="text-box-wrapper half">
-                                                                            <label class="tb-label">Check out</label>
-                                                                            <div class="input-group">
-                                                                                <input type="text" placeholder="MM/DD/YY" class="tb-input">
-                                                                                <i class="tb-icon fa fa-calendar input-group-addon"></i>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="count adult-count text-box-wrapper">
-                                                                        <label class="tb-label">Adult</label>
-                                                                        <div class="select-wrapper">
-                                                                            <!--i.fa.fa-chevron-down-->
-                                                                            <select class="form-control custom-select selectbox">
-                                                                                <option selected="selected">1</option>
-                                                                                <option>2</option>
-                                                                                <option>3</option>
-                                                                                <option>4</option>
-                                                                                <option>5</option>
-                                                                                <option>6</option>
-                                                                                <option>7</option>
-                                                                                <option>8</option>
-                                                                                <option>9</option>
-                                                                            </select>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="count child-count text-box-wrapper">
-                                                                        <label class="tb-label">Child</label>
-                                                                        <div class="select-wrapper">
-                                                                            <!--i.fa.fa-chevron-down-->
-                                                                            <select class="form-control custom-select selectbox">
-                                                                                <option selected="selected">0</option>
-                                                                                <option>1</option>
-                                                                                <option>2</option>
-                                                                                <option>3</option>
-                                                                                <option>4</option>
-                                                                                <option>5</option>
-                                                                                <option>6</option>
-                                                                                <option>7</option>
-                                                                                <option>8</option>
-                                                                                <option>9</option>
-                                                                            </select>
-                                                                        </div>
-                                                                    </div>
-                                                                    <button type="submit" data-hover="SEARCH NOW" class="btn btn-slide">
-                                                                        <span class="text">SEARCH NOW</span>
-                                                                        <span class="icons fa fa-long-arrow-right"></span>
-                                                                    </button>
-                                                                </div>
-                                                            </form>
-                                                        </div>
-                                                    </div>
-                                                    <div role="tabpanel" id="transfer" class="tab-pane fade">
-                                                        <div class="find-widget find-transfer-widget widget">
-                                                            <h4 class="title-widgets">FIND TRANSFER</h4>
-                                                            <form class="content-widget">
-                                                                <div class="ffw-radio-selection">
-                                                                    <span class="ffw-radio-btn-wrapper">
-                                                                        <input type="radio" name="flight type" value="one way" id="transfer-type-1" checked="checked" class="ffw-radio-btn">
-                                                                        <label for="transfer-type-1" class="ffw-radio-label">One Way</label>
-                                                                    </span>
-                                                                    <span class="ffw-radio-btn-wrapper">
-                                                                        <input type="radio" name="flight type" value="round trip" id="transfer-type-2" class="ffw-radio-btn">
-                                                                        <label for="transfer-type-2" class="ffw-radio-label">Round Trip</label>
-                                                                    </span>
-                                                                    <span class="ffw-radio-btn-wrapper">
-                                                                        <input type="radio" name="flight type" value="multiple cities" id="transfer-type-3" class="ffw-radio-btn">
-                                                                        <label for="transfer-type-3" class="ffw-radio-label">Multiple Places</label>
-                                                                    </span>
-                                                                    <div class="stretch">&nbsp;</div>
-                                                                </div>
-                                                                <div class="text-input small-margin-top">
-                                                                    <div class="place text-box-wrapper">
-                                                                        <label class="tb-label">Where do you want to go?</label>
-                                                                        <div class="input-group">
-                                                                            <input type="text" placeholder="Write the place" class="tb-input">
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="date text-box-wrapper">
-                                                                        <label class="tb-label">When do you want to go?</label>
-                                                                        <div class="input-group">
-                                                                            <input type="text" placeholder="MM/DD/YY" class="tb-input">
-                                                                            <i class="tb-icon fa fa-calendar input-group-addon"></i>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="count adult-count text-box-wrapper">
-                                                                        <label class="tb-label">Adult</label>
-                                                                        <div class="select-wrapper">
-                                                                            <!--i.fa.fa-chevron-down-->
-                                                                            <select class="form-control custom-select selectbox">
-                                                                                <option selected="selected">1</option>
-                                                                                <option>2</option>
-                                                                                <option>3</option>
-                                                                                <option>4</option>
-                                                                                <option>5</option>
-                                                                                <option>6</option>
-                                                                                <option>7</option>
-                                                                                <option>8</option>
-                                                                                <option>9</option>
-                                                                            </select>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="count child-count text-box-wrapper">
-                                                                        <label class="tb-label">Child</label>
-                                                                        <div class="select-wrapper">
-                                                                            <!--i.fa.fa-chevron-down-->
-                                                                            <select class="form-control custom-select selectbox">
-                                                                                <option selected="selected">0</option>
-                                                                                <option>1</option>
-                                                                                <option>2</option>
-                                                                                <option>3</option>
-                                                                                <option>4</option>
-                                                                                <option>5</option>
-                                                                                <option>6</option>
-                                                                                <option>7</option>
-                                                                                <option>8</option>
-                                                                                <option>9</option>
-                                                                            </select>
-                                                                        </div>
-                                                                    </div>
-                                                                    <button type="submit" data-hover="SEARCH NOW" class="btn btn-slide">
-                                                                        <span class="text">SEARCH NOW</span>
-                                                                        <span class="icons fa fa-long-arrow-right"></span>
-                                                                    </button>
-                                                                </div>
-                                                            </form>
-                                                        </div>
-                                                    </div>
-                                                    <div role="tabpanel" id="hotel" class="tab-pane fade">
-                                                        <div class="find-widget find-hotel-widget widget">
-                                                            <h4 class="title-widgets">FIND HOTEL</h4>
-                                                            <form class="content-widget">
-                                                                <div class="text-input small-margin-top">
-                                                                    <div class="place text-box-wrapper">
-                                                                        <label class="tb-label">Where do you want to go?</label>
-                                                                        <div class="input-group">
-                                                                            <input type="text" placeholder="Write the place" class="tb-input">
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="input-daterange">
-                                                                        <div class="text-box-wrapper half">
-                                                                            <label class="tb-label">Check in</label>
-                                                                            <div class="input-group">
-                                                                                <input type="text" placeholder="MM/DD/YY" class="tb-input">
-                                                                                <i class="tb-icon fa fa-calendar input-group-addon"></i>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="text-box-wrapper half">
-                                                                            <label class="tb-label">Check out</label>
-                                                                            <div class="input-group">
-                                                                                <input type="text" placeholder="MM/DD/YY" class="tb-input">
-                                                                                <i class="tb-icon fa fa-calendar input-group-addon"></i>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="count adult-count text-box-wrapper">
-                                                                        <label class="tb-label">Adult</label>
-                                                                        <div class="select-wrapper">
-                                                                            <!--i.fa.fa-chevron-down-->
-                                                                            <select class="form-control custom-select selectbox">
-                                                                                <option selected="selected">1</option>
-                                                                                <option>2</option>
-                                                                                <option>3</option>
-                                                                                <option>4</option>
-                                                                                <option>5</option>
-                                                                                <option>6</option>
-                                                                                <option>7</option>
-                                                                                <option>8</option>
-                                                                                <option>9</option>
-                                                                            </select>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="count child-count text-box-wrapper">
-                                                                        <label class="tb-label">Child</label>
-                                                                        <div class="select-wrapper">
-                                                                            <!--i.fa.fa-chevron-down-->
-                                                                            <select class="form-control custom-select selectbox">
-                                                                                <option selected="selected">0</option>
-                                                                                <option>1</option>
-                                                                                <option>2</option>
-                                                                                <option>3</option>
-                                                                                <option>4</option>
-                                                                                <option>5</option>
-                                                                                <option>6</option>
-                                                                                <option>7</option>
-                                                                                <option>8</option>
-                                                                                <option>9</option>
-                                                                            </select>
-                                                                        </div>
-                                                                    </div>
-                                                                    <button type="submit" data-hover="SEARCH NOW" class="btn btn-slide">
-                                                                        <span class="text">SEARCH NOW</span>
-                                                                        <span class="icons fa fa-long-arrow-right"></span>
-                                                                    </button>
-                                                                </div>
-                                                            </form>
-                                                        </div>
-                                                    </div>
-                                                    <div role="tabpanel" id="tours" class="tab-pane fade">
-                                                        <div class="find-widget find-tours-widget widget">
-                                                            <h4 class="title-widgets">FIND TOURS</h4>
-                                                            <form class="content-widget">
-                                                                <div class="text-input small-margin-top">
-                                                                    <div class="place text-box-wrapper">
-                                                                        <label class="tb-label">Where do you want to go?</label>
-                                                                        <div class="input-group">
-                                                                            <input type="text" placeholder="Write the place" class="tb-input">
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="date text-box-wrapper">
-                                                                        <label class="tb-label">When do you want to go?</label>
-                                                                        <div class="input-group">
-                                                                            <input type="text" placeholder="MM/DD/YY" class="tb-input">
-                                                                            <i class="tb-icon fa fa-calendar input-group-addon"></i>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="count adult-count text-box-wrapper">
-                                                                        <label class="tb-label">Adult</label>
-                                                                        <div class="select-wrapper">
-                                                                            <!--i.fa.fa-chevron-down-->
-                                                                            <select class="form-control custom-select selectbox">
-                                                                                <option selected="selected">1</option>
-                                                                                <option>2</option>
-                                                                                <option>3</option>
-                                                                                <option>4</option>
-                                                                                <option>5</option>
-                                                                                <option>6</option>
-                                                                                <option>7</option>
-                                                                                <option>8</option>
-                                                                                <option>9</option>
-                                                                            </select>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="count child-count text-box-wrapper">
-                                                                        <label class="tb-label">Child</label>
-                                                                        <div class="select-wrapper">
-                                                                            <!--i.fa.fa-chevron-down-->
-                                                                            <select class="form-control custom-select selectbox">
-                                                                                <option selected="selected">0</option>
-                                                                                <option>1</option>
-                                                                                <option>2</option>
-                                                                                <option>3</option>
-                                                                                <option>4</option>
-                                                                                <option>5</option>
-                                                                                <option>6</option>
-                                                                                <option>7</option>
-                                                                                <option>8</option>
-                                                                                <option>9</option>
-                                                                            </select>
-                                                                        </div>
-                                                                    </div>
-                                                                    <button type="submit" data-hover="SEARCH NOW" class="btn btn-slide">
-                                                                        <span class="text">SEARCH NOW</span>
-                                                                        <span class="icons fa fa-long-arrow-right"></span>
-                                                                    </button>
-                                                                </div>
-                                                            </form>
-                                                        </div>
-                                                    </div>
-                                                    <div role="tabpanel" id="car-rent" class="tab-pane fade">
-                                                        <div class="find-widget find-car-widget widget">
-                                                            <h4 class="title-widgets">FIND CAR</h4>
-                                                            <form class="content-widget">
-                                                                <div class="text-input small-margin-top">
-                                                                    <div class="place text-box-wrapper">
-                                                                        <label class="tb-label">Where do you want to go?</label>
-                                                                        <div class="input-group">
-                                                                            <input type="text" placeholder="Write the place" class="tb-input">
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="input-daterange">
-                                                                        <div class="text-box-wrapper half">
-                                                                            <label class="tb-label">Start date</label>
-                                                                            <div class="input-group">
-                                                                                <input type="text" placeholder="MM/DD/YY" class="tb-input">
-                                                                                <i class="tb-icon fa fa-calendar input-group-addon"></i>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="text-box-wrapper half">
-                                                                            <label class="tb-label">Return date</label>
-                                                                            <div class="input-group">
-                                                                                <input type="text" placeholder="MM/DD/YY" class="tb-input">
-                                                                                <i class="tb-icon fa fa-calendar input-group-addon"></i>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="count car-count text-box-wrapper">
-                                                                        <label class="tb-label">No. of Car</label>
-                                                                        <div class="select-wrapper">
-                                                                            <!--i.fa.fa-chevron-down-->
-                                                                            <select class="form-control custom-select selectbox">
-                                                                                <option selected="selected">1</option>
-                                                                                <option>2</option>
-                                                                                <option>3</option>
-                                                                                <option>4</option>
-                                                                                <option>5</option>
-                                                                                <option>6</option>
-                                                                                <option>7</option>
-                                                                                <option>8</option>
-                                                                                <option>9</option>
-                                                                            </select>
-                                                                        </div>
-                                                                    </div>
-                                                                    <button type="submit" data-hover="SEARCH NOW" class="btn btn-slide">
-                                                                        <span class="text">SEARCH NOW</span>
-                                                                        <span class="icons fa fa-long-arrow-right"></span>
-                                                                    </button>
-                                                                </div>
-                                                            </form>
-                                                        </div>
-                                                    </div>
-                                                    <div role="tabpanel" id="cruises" class="tab-pane fade">
-                                                        <div class="find-widget find-cruises-widget widget">
-                                                            <h4 class="title-widgets">FIND CRUISES</h4>
-                                                            <form class="content-widget">
-                                                                <div class="ffw-radio-selection">
-                                                                    <span class="ffw-radio-btn-wrapper">
-                                                                        <input type="radio" name="flight type" value="one way" id="cruises-type-1" checked="checked" class="ffw-radio-btn">
-                                                                        <label for="cruises-type-1" class="ffw-radio-label">One Way</label>
-                                                                    </span>
-                                                                    <span class="ffw-radio-btn-wrapper">
-                                                                        <input type="radio" name="flight type" value="round trip" id="cruises-type-2" class="ffw-radio-btn">
-                                                                        <label for="cruises-type-2" class="ffw-radio-label">Round Trip</label>
-                                                                    </span>
-                                                                    <span class="ffw-radio-btn-wrapper">
-                                                                        <input type="radio" name="flight type" value="multiple cities" id="cruises-type-3" class="ffw-radio-btn">
-                                                                        <label for="cruises-type-3" class="ffw-radio-label">Multiple Places</label>
-                                                                    </span>
-                                                                    <div class="stretch">&nbsp;</div>
-                                                                </div>
-                                                                <div class="text-input small-margin-top">
-                                                                    <div class="place text-box-wrapper">
-                                                                        <label class="tb-label">Where do you want to go?</label>
-                                                                        <div class="input-group">
-                                                                            <input type="text" placeholder="Write the place" class="tb-input">
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="count time-count text-box-wrapper">
-                                                                        <label class="tb-label">Time</label>
-                                                                        <div class="select-wrapper">
-                                                                            <!--i.fa.fa-chevron-down-->
-                                                                            <select class="form-control custom-select selectbox">
-                                                                                <option selected="selected">08:00</option>
-                                                                                <option>10:00</option>
-                                                                                <option>12:00</option>
-                                                                                <option>14:00</option>
-                                                                                <option>16:00</option>
-                                                                                <option>18:00</option>
-                                                                            </select>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="count adult-count text-box-wrapper">
-                                                                        <label class="tb-label">Adult</label>
-                                                                        <div class="select-wrapper">
-                                                                            <!--i.fa.fa-chevron-down-->
-                                                                            <select class="form-control custom-select selectbox">
-                                                                                <option selected="selected">1</option>
-                                                                                <option>2</option>
-                                                                                <option>3</option>
-                                                                                <option>4</option>
-                                                                                <option>5</option>
-                                                                                <option>6</option>
-                                                                                <option>7</option>
-                                                                                <option>8</option>
-                                                                                <option>9</option>
-                                                                            </select>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="count child-count text-box-wrapper">
-                                                                        <label class="tb-label">Child</label>
-                                                                        <div class="select-wrapper">
-                                                                            <!--i.fa.fa-chevron-down-->
-                                                                            <select class="form-control custom-select selectbox">
-                                                                                <option selected="selected">0</option>
-                                                                                <option>1</option>
-                                                                                <option>2</option>
-                                                                                <option>3</option>
-                                                                                <option>4</option>
-                                                                                <option>5</option>
-                                                                                <option>6</option>
-                                                                                <option>7</option>
-                                                                                <option>8</option>
-                                                                                <option>9</option>
-                                                                            </select>
-                                                                        </div>
-                                                                    </div>
-                                                                    <button type="submit" data-hover="SEARCH NOW" class="btn btn-slide">
-                                                                        <span class="text">SEARCH NOW</span>
-                                                                        <span class="icons fa fa-long-arrow-right"></span>
-                                                                    </button>
-                                                                </div>
-                                                            </form>
-                                                        </div>
-                                                    </div>
+                        <section class="about-us layout-2 padding-top padding-bottom about-us-2">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="wrapper-contact-style">
+                                        <div class="col-md-7">
+                                            <div class="group-title">
+                                                <div class="sub-title">
+                                                    <p class="text">be born agian</p>
+                                                    <i class="icons flaticon-people"></i>
+                                                </div>
+                                                <h2 class="main-title">we are exploore</h2>
+                                            </div>
+                                            <div class="about-us-wrapper">
+                                                <p class="text">Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut eim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex commodo consequat uisas
+                                                    aute irure dolor ullamco laboris nisi in reprehenderit.</p>
+                                                <div class="group-list">
+                                                    <ul class="list-unstyled about-us-list">
+                                                        <li>
+                                                            <p class="text">First Class Flights</p>
+                                                        </li>
+                                                        <li>
+                                                            <p class="text">5 Star Accommodations</p>
+                                                        </li>
+                                                        <li>
+                                                            <p class="text">Inclusive Packages</p>
+                                                        </li>
+                                                        <li>
+                                                            <p class="text">Latest Model Vehicles</p>
+                                                        </li>
+                                                    </ul>
+                                                    <ul class="list-unstyled about-us-list">
+                                                        <li>
+                                                            <p class="text">Handpicked Hotels</p>
+                                                        </li>
+                                                        <li>
+                                                            <p class="text">Accesibility managment</p>
+                                                        </li>
+                                                        <li>
+                                                            <p class="text">10 Languages available</p>
+                                                        </li>
+                                                        <li>
+                                                            <p class="text">+120 Premium city tours</p>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="group-button">
+                                                    <a href="tour-result.html" class="btn btn-maincolor">purchase now</a>
+                                                    <a href="about-us.html" class="btn">read more</a>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-                        <section class="about-us layout-1 padding-top padding-bottom">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-md-7">
-                                        <div class="group-title">
-                                            <div class="sub-title">
-                                                <p class="text">be born again</p>
-                                                <i class="icons flaticon-people"></i>
-                                            </div>
-                                            <h2 class="main-title">we are exploore</h2>
-                                        </div>
-                                        <div class="about-us-wrapper">
-                                            <p class="text">Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut eim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex commodo consequat uisas aute
-                                                irure dolor ullamco laboris nisi in reprehenderit.</p>
-                                            <div class="group-list">
-                                                <ul class="list-unstyled about-us-list">
-                                                    <li>
-                                                        <p class="text">First Class Flights</p>
-                                                    </li>
-                                                    <li>
-                                                        <p class="text">5 Star Accommodations</p>
-                                                    </li>
-                                                    <li>
-                                                        <p class="text">Inclusive Packages</p>
-                                                    </li>
-                                                    <li>
-                                                        <p class="text">Latest Model Vehicles</p>
-                                                    </li>
-                                                </ul>
-                                                <ul class="list-unstyled about-us-list">
-                                                    <li>
-                                                        <p class="text">Handpicked Hotels</p>
-                                                    </li>
-                                                    <li>
-                                                        <p class="text">Accesibility managment</p>
-                                                    </li>
-                                                    <li>
-                                                        <p class="text">10 Languages available</p>
-                                                    </li>
-                                                    <li>
-                                                        <p class="text">+120 Premium city tours</p>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <div class="group-button">
-                                                <a href="tour-result.html" class="btn btn-maincolor">purchase now</a>
-                                                <a href="about-us.html" class="btn">read more</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-5">
-                                        <div data-wow-delay="0.5s" class="about-us-image wow zoomIn">
-                                            <img src="assets/images/homepage/about-us-1.jpg" alt="" class="img-responsive">
+                                        <div data-wow-delay="0.5s" class="about-us-image wow fadeInRight">
+                                            <img src="assets/images/homepage/about-us-2.jpg" alt="" class="img-responsive">
                                         </div>
                                     </div>
                                 </div>
@@ -1642,15 +1324,10 @@
                                 </div>
                             </div>
                         </section>
-                        <section class="banner-sale-1">
-                            <div class="banner-left">
-                                <div class="title-box">
-                                    <h1 class="title-overlay title-1 padding-top">Explore</h1>
-                                    <h2 class="title-overlay title-2">Dream</h2>
-                                    <h3 class="title-overlay title-3 padding-bottom">Discover </h3>
-                                </div>
-                            </div>
-                            <div class="banner-right">
+                        <section class="banner-sale-3 new-style">
+                            <div class="clouds_one"></div>
+                            <div class="clouds_two"></div>
+                            <div class="container">
                                 <div class="text-salebox">
                                     <div class="text-left">
                                         <div class="sale-box">
@@ -1664,7 +1341,8 @@
                                     </div>
                                     <div class="text-right">
                                         <h5 class="title">Epic Journeys From The Explooer</h5>
-                                        <p class="text">cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa.</p>
+                                        <p class="text">cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+                                            sint occaecat cupidatat non proident, sunt in culpa velit esse cillum dolore eu fugiat. Ut enim ad minim veniam.</p>
                                         <div class="group-button">
                                             <a href="tour-view.html" class="btn btn-maincolor">book now</a>
                                             <a href="tour-view.html" class="btn btn-transparent">read more</a>
@@ -1739,32 +1417,27 @@
                                 </div>
                             </div>
                         </section>
-                        <section class="contact style-1">
+                        <section class="contact style-2">
                             <div class="container">
                                 <div class="row">
-                                    <div class="wrapper-contact-style">
-                                        <div data-wow-delay="0.5s" class="contact-wrapper-images wow fadeInLeft">
-                                            <img src="assets/images/homepage/contact-people.png" alt="" class="img-responsive">
-                                        </div>
-                                        <div class="col-lg-6 col-sm-7 col-lg-offset-4 col-sm-offset-5">
-                                            <div data-wow-delay="0.4s" class="contact-wrapper padding-top padding-bottom wow fadeInRight">
-                                                <div class="contact-box">
-                                                    <h5 class="title">contact us</h5>
-                                                    <p class="text">Just pack and go! Let leave your travel plan to travel experts!</p>
-                                                    <form class="contact-form">
-                                                        <input type="text" placeholder="Your Name" class="form-control form-input">
-                                                        <!--label.control-label.form-label.warning-label(for="") Warning for the above !-->
-                                                        <input type="email" placeholder="Your Email" class="form-control form-input">
-                                                        <!--label.control-label.form-label.warning-label(for="") Warning for the above !-->
-                                                        <textarea placeholder="Your Message" class="form-control form-input"></textarea>
-                                                        <div class="contact-submit">
-                                                            <button type="submit" data-hover="SEND NOW" class="btn btn-slide">
-                                                                <span class="text">send message</span>
-                                                                <span class="icons fa fa-long-arrow-right"></span>
-                                                            </button>
-                                                        </div>
-                                                    </form>
-                                                </div>
+                                    <div class="col-sm-8 col-sm-offset-2">
+                                        <div data-wow-delay="0.4s" class="contact-wrapper padding-top padding-bottom wow zoomIn">
+                                            <div class="contact-box">
+                                                <h5 class="title">contact us</h5>
+                                                <p class="text">Just pack and go! Let leave your travel plan to travel experts!</p>
+                                                <form class="contact-form">
+                                                    <input type="text" placeholder="Your Name" class="form-control form-input">
+                                                    <!--label.control-label.form-label.warning-label(for="") Warning for the above !-->
+                                                    <input type="email" placeholder="Your Email" class="form-control form-input">
+                                                    <!--label.control-label.form-label.warning-label(for="") Warning for the above !-->
+                                                    <textarea placeholder="Your Message" class="form-control form-input"></textarea>
+                                                    <div class="contact-submit">
+                                                        <button type="submit" data-hover="SEND NOW" class="btn btn-slide">
+                                                            <span class="text">send message</span>
+                                                            <span class="icons fa fa-long-arrow-right"></span>
+                                                        </button>
+                                                    </div>
+                                                </form>
                                             </div>
                                         </div>
                                     </div>
@@ -1781,167 +1454,169 @@
                 </div>
                 <!-- FOOTER-->
                 <footer>
-                    <div class="footer-main padding-top padding-bottom">
-                        <div class="container">
-                            <div class="footer-main-wrapper">
-                                <a href="index.html" class="logo-footer">
-                                    <img src="assets/images/logo/logo-white-color-1.png" alt="" class="img-responsive" />
-                                </a>
-                                <div class="row">
-                                    <div class="col-2">
-                                        <div class="col-md-3 col-xs-5">
-                                            <div class="contact-us-widget widget">
-                                                <div class="title-widget">contact us</div>
-                                                <div class="content-widget">
-                                                    <div class="info-list">
+                    <div class="bg-blue-gradient">
+                        <div class="footer-main bg-transparent padding-top padding-bottom">
+                            <div class="container">
+                                <div class="footer-main-wrapper">
+                                    <a href="index.html" class="logo-footer logo-black">
+                                        <img src="assets/images/logo/logo-black-color-1.png" alt="" class="img-responsive" />
+                                    </a>
+                                    <div class="row">
+                                        <div class="col-2">
+                                            <div class="col-md-3 col-xs-5">
+                                                <div class="contact-us-widget widget">
+                                                    <div class="title-widget">contact us</div>
+                                                    <div class="content-widget">
+                                                        <div class="info-list">
+                                                            <ul class="list-unstyled">
+                                                                <li>
+                                                                    <i class="icons fa fa-map-marker"></i>
+                                                                    <a href="#" class="link">132, My Street, Kingston, New York 12401</a>
+                                                                </li>
+                                                                <li>
+                                                                    <i class="icons fa fa-phone"></i>
+                                                                    <a href="#" class="link">270 - 188 - 6026</a>
+                                                                </li>
+                                                                <li>
+                                                                    <i class="icons fa fa-envelope-o"></i>
+                                                                    <a href="#" class="link">domain@expooler.com</a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="form-email">
+                                                            <p class="text">Sign up for our mailing list to get latest updates and offers.</p>
+                                                            <form action="index.html">
+                                                                <div class="input-group">
+                                                                    <input type="text" placeholder="Email address" class="form-control form-email-widget" />
+                                                                    <span class="input-group-btn">
+                                                                        <button type="submit" class="btn-email">&#10004;</button>
+                                                                    </span>
+                                                                </div>
+                                                            </form>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-2 col-xs-3">
+                                                <div class="booking-widget widget text-center">
+                                                    <div class="title-widget">book now</div>
+                                                    <div class="content-widget">
                                                         <ul class="list-unstyled">
                                                             <li>
-                                                                <i class="icons fa fa-map-marker"></i>
-                                                                <a href="#" class="link">132, My Street, Kingston, New York 12401</a>
+                                                                <a href="#" class="link">Flights</a>
                                                             </li>
                                                             <li>
-                                                                <i class="icons fa fa-phone"></i>
-                                                                <a href="#" class="link">270 - 188 - 6026</a>
+                                                                <a href="#" class="link">Tours</a>
                                                             </li>
                                                             <li>
-                                                                <i class="icons fa fa-envelope-o"></i>
-                                                                <a href="#" class="link">domain@expooler.com</a>
+                                                                <a href="#" class="link">Packages</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#" class="link">Transfer</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#" class="link">Car Rent</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#" class="link">Cruises</a>
                                                             </li>
                                                         </ul>
                                                     </div>
-                                                    <div class="form-email">
-                                                        <p class="text">Sign up for our mailing list to get latest updates and offers.</p>
-                                                        <form action="index.html">
-                                                            <div class="input-group">
-                                                                <input type="text" placeholder="Email address" class="form-control form-email-widget" />
-                                                                <span class="input-group-btn">
-                                                                    <button type="submit" class="btn-email">&#10004;</button>
-                                                                </span>
-                                                            </div>
-                                                        </form>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-2 col-xs-4">
+                                                <div class="explore-widget widget">
+                                                    <div class="title-widget">explore</div>
+                                                    <div class="content-widget">
+                                                        <ul class="list-unstyled">
+                                                            <li>
+                                                                <a href="#" class="link">Tour Singapore City</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#" class="link">Tour Manila City</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#" class="link">Tour New York City</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#" class="link">Tour Sanghai City</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#" class="link">Tour Hongkong City</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#" class="link">Tour Tokyo City</a>
+                                                            </li>
+                                                        </ul>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-md-2 col-xs-3">
-                                            <div class="booking-widget widget text-center">
-                                                <div class="title-widget">book now</div>
-                                                <div class="content-widget">
-                                                    <ul class="list-unstyled">
-                                                        <li>
-                                                            <a href="#" class="link">Flights</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#" class="link">Tours</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#" class="link">Packages</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#" class="link">Transfer</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#" class="link">Car Rent</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#" class="link">Cruises</a>
-                                                        </li>
-                                                    </ul>
+                                        <div class="col-2">
+                                            <div class="col-md-2 col-xs-6">
+                                                <div class="top-deals-widget widget">
+                                                    <div class="title-widget">top deals</div>
+                                                    <div class="content-widget">
+                                                        <ul class="list-unstyled">
+                                                            <li>
+                                                                <a href="#" class="link">Tour Packages Singapore</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#" class="link">Tour Packages Manila</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#" class="link">Tour Packages New York</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#" class="link">Tour Packages Sanghai</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#" class="link">Tour Packages Hongkong</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#" class="link">Tour Packages Tokyo</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="col-md-2 col-xs-4">
-                                            <div class="explore-widget widget">
-                                                <div class="title-widget">explore</div>
-                                                <div class="content-widget">
-                                                    <ul class="list-unstyled">
-                                                        <li>
-                                                            <a href="#" class="link">Tour Singapore City</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#" class="link">Tour Manila City</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#" class="link">Tour New York City</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#" class="link">Tour Sanghai City</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#" class="link">Tour Hongkong City</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#" class="link">Tour Tokyo City</a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-2">
-                                        <div class="col-md-2 col-xs-6">
-                                            <div class="top-deals-widget widget">
-                                                <div class="title-widget">top deals</div>
-                                                <div class="content-widget">
-                                                    <ul class="list-unstyled">
-                                                        <li>
-                                                            <a href="#" class="link">Tour Packages Singapore</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#" class="link">Tour Packages Manila</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#" class="link">Tour Packages New York</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#" class="link">Tour Packages Sanghai</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#" class="link">Tour Packages Hongkong</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#" class="link">Tour Packages Tokyo</a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-3 col-xs-6">
-                                            <div class="destination-widget widget">
-                                                <div class="title-widget">Destination</div>
-                                                <div class="content-widget">
-                                                    <ul class="list-unstyled list-inline">
-                                                        <li>
-                                                            <a href="#" class="thumb">
-                                                                <img src="assets/images/footer/gallery-01.jpg" alt="" class="img-responsive" />
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#" class="thumb">
-                                                                <img src="assets/images/footer/gallery-02.jpg" alt="" class="img-responsive" />
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#" class="thumb">
-                                                                <img src="assets/images/footer/gallery-03.jpg" alt="" class="img-responsive" />
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#" class="thumb">
-                                                                <img src="assets/images/footer/gallery-04.jpg" alt="" class="img-responsive" />
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#" class="thumb">
-                                                                <img src="assets/images/footer/gallery-05.jpg" alt="" class="img-responsive" />
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#" class="thumb">
-                                                                <img src="assets/images/footer/gallery-06.jpg" alt="" class="img-responsive" />
-                                                            </a>
-                                                        </li>
-                                                    </ul>
+                                            <div class="col-md-3 col-xs-6">
+                                                <div class="destination-widget widget">
+                                                    <div class="title-widget">Destination</div>
+                                                    <div class="content-widget">
+                                                        <ul class="list-unstyled list-inline">
+                                                            <li>
+                                                                <a href="#" class="thumb">
+                                                                    <img src="assets/images/footer/gallery-01.jpg" alt="" class="img-responsive" />
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#" class="thumb">
+                                                                    <img src="assets/images/footer/gallery-02.jpg" alt="" class="img-responsive" />
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#" class="thumb">
+                                                                    <img src="assets/images/footer/gallery-03.jpg" alt="" class="img-responsive" />
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#" class="thumb">
+                                                                    <img src="assets/images/footer/gallery-04.jpg" alt="" class="img-responsive" />
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#" class="thumb">
+                                                                    <img src="assets/images/footer/gallery-05.jpg" alt="" class="img-responsive" />
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#" class="thumb">
+                                                                    <img src="assets/images/footer/gallery-06.jpg" alt="" class="img-responsive" />
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -1949,96 +1624,96 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="hyperlink">
-                        <div class="container">
-                            <div class="slide-logo-wrapper">
-                                <div class="logo-item">
-                                    <a href="#" class="link">
-                                        <img src="assets/images/footer/logo-01.png" alt="" class="img-responsive" />
-                                    </a>
+                        <div class="hyperlink bg-transparent">
+                            <div class="container">
+                                <div class="slide-logo-wrapper">
+                                    <div class="logo-item">
+                                        <a href="#" class="link">
+                                            <img src="assets/images/footer/logo-01-g.png" alt="" class="img-responsive" />
+                                        </a>
+                                    </div>
+                                    <div class="logo-item">
+                                        <a href="#" class="link">
+                                            <img src="assets/images/footer/logo-02-g.png" alt="" class="img-responsive" />
+                                        </a>
+                                    </div>
+                                    <div class="logo-item">
+                                        <a href="#" class="link">
+                                            <img src="assets/images/footer/logo-03-g.png" alt="" class="img-responsive" />
+                                        </a>
+                                    </div>
+                                    <div class="logo-item">
+                                        <a href="#" class="link">
+                                            <img src="assets/images/footer/logo-04-g.png" alt="" class="img-responsive" />
+                                        </a>
+                                    </div>
+                                    <div class="logo-item">
+                                        <a href="#" class="link">
+                                            <img src="assets/images/footer/logo-05-g.png" alt="" class="img-responsive" />
+                                        </a>
+                                    </div>
+                                    <div class="logo-item">
+                                        <a href="#" class="link">
+                                            <img src="assets/images/footer/logo-06-g.png" alt="" class="img-responsive" />
+                                        </a>
+                                    </div>
+                                    <div class="logo-item">
+                                        <a href="#" class="link">
+                                            <img src="assets/images/footer/logo-01-g.png" alt="" class="img-responsive" />
+                                        </a>
+                                    </div>
+                                    <div class="logo-item">
+                                        <a href="#" class="link">
+                                            <img src="assets/images/footer/logo-02-g.png" alt="" class="img-responsive" />
+                                        </a>
+                                    </div>
+                                    <div class="logo-item">
+                                        <a href="#" class="link">
+                                            <img src="assets/images/footer/logo-03-g.png" alt="" class="img-responsive" />
+                                        </a>
+                                    </div>
+                                    <div class="logo-item">
+                                        <a href="#" class="link">
+                                            <img src="assets/images/footer/logo-04-g.png" alt="" class="img-responsive" />
+                                        </a>
+                                    </div>
+                                    <div class="logo-item">
+                                        <a href="#" class="link">
+                                            <img src="assets/images/footer/logo-05-g.png" alt="" class="img-responsive" />
+                                        </a>
+                                    </div>
+                                    <div class="logo-item">
+                                        <a href="#" class="link">
+                                            <img src="assets/images/footer/logo-06-g.png" alt="" class="img-responsive" />
+                                        </a>
+                                    </div>
                                 </div>
-                                <div class="logo-item">
-                                    <a href="#" class="link">
-                                        <img src="assets/images/footer/logo-02.png" alt="" class="img-responsive" />
-                                    </a>
+                                <div class="social-footer">
+                                    <ul class="list-inline list-unstyled">
+                                        <li>
+                                            <a href="#" class="link facebook">
+                                                <i class="fa fa-facebook"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="link twitter">
+                                                <i class="fa fa-twitter"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="link pinterest">
+                                                <i class="fa fa-pinterest-p"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="link google">
+                                                <i class="fa fa-google"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
                                 </div>
-                                <div class="logo-item">
-                                    <a href="#" class="link">
-                                        <img src="assets/images/footer/logo-03.png" alt="" class="img-responsive" />
-                                    </a>
-                                </div>
-                                <div class="logo-item">
-                                    <a href="#" class="link">
-                                        <img src="assets/images/footer/logo-04.png" alt="" class="img-responsive" />
-                                    </a>
-                                </div>
-                                <div class="logo-item">
-                                    <a href="#" class="link">
-                                        <img src="assets/images/footer/logo-05.png" alt="" class="img-responsive" />
-                                    </a>
-                                </div>
-                                <div class="logo-item">
-                                    <a href="#" class="link">
-                                        <img src="assets/images/footer/logo-06.png" alt="" class="img-responsive" />
-                                    </a>
-                                </div>
-                                <div class="logo-item">
-                                    <a href="#" class="link">
-                                        <img src="assets/images/footer/logo-01.png" alt="" class="img-responsive" />
-                                    </a>
-                                </div>
-                                <div class="logo-item">
-                                    <a href="#" class="link">
-                                        <img src="assets/images/footer/logo-02.png" alt="" class="img-responsive" />
-                                    </a>
-                                </div>
-                                <div class="logo-item">
-                                    <a href="#" class="link">
-                                        <img src="assets/images/footer/logo-03.png" alt="" class="img-responsive" />
-                                    </a>
-                                </div>
-                                <div class="logo-item">
-                                    <a href="#" class="link">
-                                        <img src="assets/images/footer/logo-04.png" alt="" class="img-responsive" />
-                                    </a>
-                                </div>
-                                <div class="logo-item">
-                                    <a href="#" class="link">
-                                        <img src="assets/images/footer/logo-05.png" alt="" class="img-responsive" />
-                                    </a>
-                                </div>
-                                <div class="logo-item">
-                                    <a href="#" class="link">
-                                        <img src="assets/images/footer/logo-06.png" alt="" class="img-responsive" />
-                                    </a>
-                                </div>
+                                <div class="name-company">&copy; Designed by SWLABS.</div>
                             </div>
-                            <div class="social-footer">
-                                <ul class="list-inline list-unstyled">
-                                    <li>
-                                        <a href="#" class="link facebook">
-                                            <i class="fa fa-facebook"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="link twitter">
-                                            <i class="fa fa-twitter"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="link pinterest">
-                                            <i class="fa fa-pinterest-p"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="link google">
-                                            <i class="fa fa-google"></i>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="name-company">&copy; Designed by SWLABS.</div>
                         </div>
                     </div>
                 </footer>
