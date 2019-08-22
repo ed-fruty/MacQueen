@@ -24,6 +24,8 @@ class Package extends Resource
      */
     public static $model = 'App\Packages\Package';
     public static $group = 'Packages';
+    public static $icon ='<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAABLUlEQVRIx2NgoDeYcPJnObG4//h3BdItOPXzPzF4yZXf/yef/vmo//QPJZpYsPPB7/+nX/75P+UMiZaQYsHDr/9It4RUC0i2hBwL4Jac/fmAahbgwoPLgsjFz+E0Pky2BQFzn8BpfHjUBwPjg8x1b/53HvkGxlT1QcbaN/8nH/v8/0xd8f8v3hL/v7sL/T9bU/B/6uG3/8/V5P3/b8vwDoif/rdj6PivzcBGsg9Kt334f7q+BGQQCv7sI4Uh9t+GoZ1kH/Sf/Al2OYZh2PEzkn3Qd/IHdtdix4/JKirO1BURa0EXWRZMO/zm/+swHUKGX/pvzcBLdmE3Z/f9/29CtXAZfuW/JYM09mR6+mcHsXju7vv9z6NMr6OlnJX/HRgEqNoSARqcAMQ3QTS6HABHTlMbKXCoMgAAAABJRU5ErkJggg==">';
+
 
 
     /**
@@ -60,7 +62,9 @@ class Package extends Resource
             BelongsTo::make('PackageCategory'),
             Number::make('days'),
             Number::make('nights'),
-            HasMany::make('PackageInclusions','packageinclusions')
+            HasMany::make('PackageHotels','package_hotels'),
+            HasMany::make('PackageInclusions','packageinclusions'),
+            HasMany::make('PackageTypes','package_types'),
         ];
     }
 

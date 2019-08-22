@@ -32,4 +32,15 @@ class Package extends Model
         return $this->hasMany(PackageInclusion::class,'package_id');
     }
 
+    public function package_types(){
+        return $this->hasMany(PackageType::class,'package_id');
+    }
+    public function package_hotels(){
+        return $this->hasMany(PackageHotel::class,'package_id');
+    }
+    public function package_exclusions(){
+        return $this->hasMany(PackageExclusion::class,'package_id');
+    }
+
+
 }
