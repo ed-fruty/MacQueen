@@ -18,7 +18,7 @@ class PackageType extends Resource
      */
     public static $model = 'App\Packages\PackageType';
     public static $group='Packages';
-    public static $icon ='<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAA9ElEQVRIx2NgGAWkgseFMpw0M/w/AwPjs1ql9f8bGJiobvizOuV0oOFbn9Up/Qfibc9qldNQ5cHiRGMMC942qPABJa5CFCiee9WgzUNVC6CGHAUa3gSkj9Ak/F+XqfOC2C9KxLn/hzIwj6ai0VQ0zFPRrMgd2jRLRXOitofOjtz2e07Etg7iUxHYYgcWZNe9K1fiB6o9AcIgNkhsdsS2cJDhQPx/dtTWBqJT0ZMGFRmwAUBNQM1/Zkduj4FZAjMc5nKw4RHb68lKRbOitpWDDUCyhCjDSUlF6JYQNJwcAA2q/1CDMcOcKkkR4RPquRyrT/C4HAApV2cQGRR5xQAAAABJRU5ErkJggg==">';
+    public static $icon ='<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAAP0lEQVRIx2NgGFZg4+uPDZtef/pPCQaZMUIsiDx96z/DmoNgGpmPDcPUDC4LRuNgNA5G42A0DkbjYNBaMCQBADT/mjVfYqK5AAAAAElFTkSuQmCC">';
 
 
 

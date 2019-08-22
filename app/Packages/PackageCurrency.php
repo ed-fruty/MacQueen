@@ -8,6 +8,7 @@ class PackageCurrency extends Model
 {
     protected $fillable=[
         'name',
-        'code'
+        'code',
+        'symbol'
     ];
 }

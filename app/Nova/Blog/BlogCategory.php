@@ -18,7 +18,9 @@ class BlogCategory extends Resource
      */
     public static $model = 'App\Blog\BlogCategory';
     public static $group='Blog';
+
     public static $icon='<img src="https://img.icons8.com/color/24/000000/google-blog-search.png">';
+
 
     /**
      * The single value that should be used to represent the resource when being displayed.
@@ -94,4 +96,5 @@ class BlogCategory extends Resource
     {
         return [];
     }
+
 }

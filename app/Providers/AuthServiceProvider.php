@@ -2,6 +2,10 @@
 
 namespace App\Providers;
 
+use App\Packages\PackageCurrency;
+use App\Packages\PackageStatus;
+use App\Policies\Admin\PackageCurrienciesPolicy;
+use App\Policies\Admin\PackageStatusPolicy;
 use App\Policies\SettingPolicy;
 use App\Setting;
 use Illuminate\Support\Facades\Gate;
@@ -17,6 +21,8 @@ class AuthServiceProvider extends ServiceProvider
     protected $policies = [
 //         'App\Setting' => 'App\Policies\ModelPolicy',
         Setting::class=>SettingPolicy::class,
+        PackageStatus::class=>PackageStatusPolicy::class,
+        PackageCurrency::class=>PackageCurrienciesPolicy::class,
 
     ];
 

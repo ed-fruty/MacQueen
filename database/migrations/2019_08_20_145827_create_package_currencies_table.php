@@ -17,6 +17,7 @@ class CreatePackageCurrenciesTable extends Migration
             $table->bigIncrements('id');
             $table->string('name');
             $table->string('code');
+            $table->string('symbol');
             $table->timestamps();
         });
     }
