@@ -16,30 +16,30 @@
 a:active,
 a:focus,
 a:hover {
-    color: #7ad6eb;
+    color: #019dcd;
 }
 
 .spinner > div {
-    background-color: #7ad6eb;
+    background-color: #019dcd;
 }
 
 .bg-transparent .header-topbar .topbar-left li:hover i,
 .bg-transparent .header-topbar .topbar-left li:hover span {
-    color: #7ad6eb;
+    color: #019dcd;
 }
 
 .bg-transparent .header-main.header-fixed .nav-search form .searchbutton {
-    background-color: #7ad6eb;
+    background-color: #019dcd;
 }
 
 .bg-white .header-topbar .topbar-left li:hover i,
 .bg-white .header-topbar .topbar-left li:hover span {
-    color: #7ad6eb;
+    color: #019dcd;
 }
 
 .header-03 .header-topbar .btn-menu:hover .icons,
 .header-03 .header-topbar .btn-menu:hover .text {
-    color: #7ad6eb;
+    color: #019dcd;
 }
 
 /*----------  2.1. Topbar Header  ----------*/
@@ -47,117 +47,117 @@ a:hover {
 .header-topbar a:hover,
 .header-topbar p:hover,
 .header-topbar span:hover {
-    color: #7ad6eb;
+    color: #019dcd;
 }
 
 .header-topbar .topbar-left > li:hover i,
 .header-topbar .topbar-left > li:hover span {
-    color: #025a98;
+    color: #313c7c;
 }
 
 .navigation .nav-links li.active .main-menu,
 .navigation .nav-links li:hover .main-menu {
-    color: #7ad6eb;
+    color: #019dcd;
 }
 
 .navigation .nav-links li:hover .main-menu .icons-dropdown i {
-    color: #025a98;
+    color: #313c7c;
 }
 
 .navigation .nav-links .main-menu:after,
 .navigation .nav-links .main-menu:before {
-    background-color: #025a98;
+    background-color: #313c7c;
 }
 
 .bg-transparent .navigation .nav-links li.active .main-menu,
 .bg-transparent .navigation .nav-links li:hover .main-menu {
-    color: #025a98 !important;
+    color: #313c7c !important;
 }
 
 .bg-white .navigation .nav-links li.active .main-menu,
 .bg-white .navigation .nav-links li:hover .main-menu {
-    color: #7ad6eb !important;
+    color: #019dcd !important;
 }
 
 .dropdown-menu-1,
 .dropdown-menu-2 {
-    border-bottom: 2px solid #025a98;
+    border-bottom: 2px solid #313c7c;
 }
 
 .wrapper-mobile-nav {
-    background: #7ad6eb;
+    background: #019dcd;
 }
 
 .wrapper-mobile-nav .header-main .login-widget .item:hover {
-    background-color: #7ad6eb;
+    background-color: #019dcd;
 }
 
 .menu-mobile {
-    background-color: #7ad6eb;
+    background-color: #019dcd;
 }
 
 .menu-mobile .main-menu {
-    background-color: #7ad6eb;
+    background-color: #019dcd;
 }
 
 .menu-mobile .main-menu:active,
 .menu-mobile .main-menu:hover {
-    background-color: #7ad6eb;
+    background-color: #019dcd;
 }
 
 /*----------  3.3. Both Sidebar  ----------*/
 
 .contact-us-widget .info-list ul li .link:hover {
-    color: #7ad6eb;
+    color: #019dcd;
 }
 
 .form-email .btn-email {
-    background-color: #7ad6eb;
+    background-color: #019dcd;
 }
 
 .booking-widget ul li .link:before {
-    color: #7ad6eb;
+    color: #019dcd;
 }
 
 .booking-widget ul li:hover .link {
-    color: #7ad6eb;
+    color: #019dcd;
 }
 
 .explore-widget ul li:hover .link,
 .top-deals-widget ul li:hover .link {
-    color: #7ad6eb;
+    color: #019dcd;
 }
 
 /*----------   Find     ---------*/
 
 .find-widget {
-    background-color: #7ad6eb;
+    background-color: #019dcd;
 }
 
 .find-widget .submit-btn-wrapper .submit-btn {
-    color: #7ad6eb;
+    color: #019dcd;
 }
 
 .find-widget .submit-btn-wrapper .text {
-    color: #7ad6eb;
+    color: #019dcd;
 }
 
 .tab-search-condensed {
-    background-color: #7ad6eb;
+    background-color: #019dcd;
 }
 
 /*----------    Flight Time    ---------*/
 
 .flight-time-widget .flight-time-visual-widget .visual .bar .arrive.indicator,
 .flight-time-widget .flight-time-visual-widget .visual .bar .depart.indicator {
-    background-color: #7ad6eb;
+    background-color: #019dcd;
 }
 
 /*----------      Price      ---------*/
 
 .price-widget .nstSlider .leftGrip.indicator,
 .price-widget .nstSlider .rightGrip.indicator {
-    background-color: #7ad6eb;
+    background-color: #019dcd;
 }
 
 /*---------- Tab search  ---------- */
@@ -165,46 +165,46 @@ a:hover {
 .tab-search .tab-btn-wrapper .tab-btn:active,
 .tab-search .tab-btn-wrapper .tab-btn:focus,
 .tab-search .tab-btn-wrapper .tab-btn:hover {
-    background-color: #7ad6eb;
+    background-color: #019dcd;
 }
 
 .tab-search .tab-btn-wrapper.active .tab-btn {
-    background-color: #7ad6eb;
+    background-color: #019dcd;
 }
 
 .tab-search-default .tab-btn-wrapper .tab-btn i {
-    color: #7ad6eb;
+    color: #019dcd;
 }
 
 .tab-search-default .tab-content-bg {
-    background-color: #7ad6eb;
+    background-color: #019dcd;
 }
 
 .tab-search-condensed .tab-btn-wrapper .tab-btn {
-    color: #7ad6eb;
+    color: #019dcd;
 }
 
 .tab-search-condensed .tab-btn-wrapper .tab-btn i {
-    color: #7ad6eb;
+    color: #019dcd;
 }
 
 /*----------  2.3. Flight Date Selection  ---------*/
 
 .fds-widget .price-select.yellow {
-    background-color: #7ad6eb;
+    background-color: #019dcd;
 }
 
 /*----------  2.7. Single Flight Result  ---------*/
 
 .single-flight-result form.flight-class .class-selection-wrapper label.radio-box span.text-wrapper span.price {
-    color: #7ad6eb;
+    color: #019dcd;
 }
 
 /*------------  2.11. Social  -----------*/
 
 .social-widget ul li a.social-icon:hover {
-    border-color: #7ad6eb;
-    background-color: #7ad6eb;
+    border-color: #019dcd;
+    background-color: #019dcd;
 }
 
 /*==============================
@@ -214,33 +214,33 @@ a:hover {
 /*----------  4.1. Main Footer  ----------*/
 
 .bg-blue-gradient .link:hover {
-    color: #7ad6eb !important;
+    color: #019dcd !important;
 }
 
 /*----------  4.2. subscribe email  ----------*/
 
 .subscribe-email {
-    background-color: #7ad6eb;
+    background-color: #019dcd;
 }
 
 .form-subscribe-email .btn-email {
-    color: #7ad6eb;
+    color: #019dcd;
 }
 
 .page-title-wrapper .breadcrumb li .link:hover {
-    color: #7ad6eb;
+    color: #019dcd;
 }
 
 .page-title-wrapper .breadcrumb li.active .link:after {
-    background-color: #7ad6eb;
+    background-color: #019dcd;
 }
 
 .page-title-wrapper .price .number {
-    color: #7ad6eb;
+    color: #019dcd;
 }
 
 .page-title-wrapper .price .unit {
-    color: #7ad6eb;
+    color: #019dcd;
 }
 
 /****    COMPONENTS    *****/
@@ -248,257 +248,257 @@ a:hover {
 /*----------  1.1. Banner  ----------*/
 
 .page-title-wrapper .breadcrumb {
-    border-bottom: 1px solid #7ad6eb;
+    border-bottom: 1px solid #019dcd;
 }
 
 .page-title-wrapper .breadcrumb li .link:hover {
-    color: #7ad6eb;
+    color: #019dcd;
 }
 
 .page-title-wrapper .price .number {
-    color: #7ad6eb;
+    color: #019dcd;
 }
 
 .page-title-wrapper .price .unit {
-    color: #7ad6eb;
+    color: #019dcd;
 }
 
 /*----------  1.2. Page Title & Button & ...  ----------*/
 
 .group-title .sub-title .icons:after {
-    background-color: #7ad6eb;
+    background-color: #019dcd;
 }
 
 .title-style-2:after {
-    background-color: #7ad6eb;
+    background-color: #019dcd;
 }
 
 .btn.btn-maincolor {
-    border: 1px solid #7ad6eb;
-    background-color: #7ad6eb;
+    border: 1px solid #019dcd;
+    background-color: #019dcd;
 }
 
 .btn.btn-gray:hover {
-    border: 1px solid #7ad6eb;
-    background-color: #7ad6eb;
+    border: 1px solid #019dcd;
+    background-color: #019dcd;
 }
 
 .btn-slide {
-    color: #7ad6eb;
+    color: #019dcd;
 }
 
 .btn-slide .text {
-    color: #7ad6eb;
+    color: #019dcd;
 }
 
 .btn-slide .icons {
-    color: #7ad6eb;
+    color: #019dcd;
 }
 
 .btn-slide:before {
-    color: #7ad6eb;
+    color: #019dcd;
 }
 
 #back-top .link {
-    color: #7ad6eb;
-    border: 2px solid #7ad6eb;
+    color: #019dcd;
+    border: 2px solid #019dcd;
 }
 
 #back-top .link:hover {
-    background-color: #7ad6eb;
+    background-color: #019dcd;
 }
 
 .stars:after {
-    color: #7ad6eb;
+    color: #019dcd;
 }
 
 .label-sale {
-    background-color: #7ad6eb;
+    background-color: #019dcd;
 }
 
 /*----------  1.3. Main layout  ----------*/
 
 .tours-layout .image-wrapper .title-wrapper .title:before {
-    background: #7ad6eb;
+    background: #019dcd;
 }
 
 .tours-layout .image-wrapper .title-wrapper .title:hover {
-    color: #7ad6eb;
+    color: #019dcd;
 }
 
 .tours-layout .content-wrapper .list-info li .link:hover {
-    background-color: #7ad6eb;
+    background-color: #019dcd;
 }
 
 .tours-layout .content-wrapper > .content .title .price {
-    color: #7ad6eb;
+    color: #019dcd;
 }
 
 .tours-layout .content-wrapper > .content .group-btn-tours .left-btn:hover,
 .tours-layout .content-wrapper > .content .group-btn-tours .right-btn:hover {
-    background-color: #7ad6eb;
+    background-color: #019dcd;
 }
 
 .hotels-layout .image-wrapper .title-wrapper .title:before {
-    background: #7ad6eb;
+    background: #019dcd;
 }
 
 .hotels-layout .image-wrapper .title-wrapper .title:hover {
-    color: #7ad6eb;
+    color: #019dcd;
 }
 
 .hotels-layout .content-wrapper .list-info .link:hover {
-    background-color: #7ad6eb;
+    background-color: #019dcd;
 }
 
 .hotels-layout .content-wrapper .list-info .share-social-list .link-social:hover {
-    background-color: #7ad6eb;
+    background-color: #019dcd;
 }
 
 .hotels-layout .content-wrapper > .content .title .price {
-    color: #7ad6eb;
+    color: #019dcd;
 }
 
 .hotels-layout .content-wrapper > .content .group-btn-tours:hover {
-    background-color: #7ad6eb;
+    background-color: #019dcd;
 }
 
 .new-layout .content-wrapper .title:hover {
-    color: #7ad6eb;
+    color: #019dcd;
 }
 
 .new-layout .content-wrapper .info li .link:hover {
-    color: #7ad6eb;
+    color: #019dcd;
 }
 
 .cruises-layout .content-wrapper .title:hover {
-    color: #7ad6eb;
+    color: #019dcd;
 }
 
 .cruises-layout .content-wrapper .price {
-    color: #7ad6eb;
+    color: #019dcd;
 }
 
 .car-rent-layout .content-wrapper .title:hover {
-    color: #7ad6eb;
+    color: #019dcd;
 }
 
 .car-rent-layout .content-wrapper .price {
-    color: #7ad6eb;
+    color: #019dcd;
 }
 
 .special-offer-layout .image-wrapper .title-wrapper .title:before {
-    background: #7ad6eb;
+    background: #019dcd;
 }
 
 .special-offer-layout .image-wrapper .title-wrapper .title:hover {
-    color: #7ad6eb;
+    color: #019dcd;
 }
 
 .mozilla5 .homepage-default .group-title .title,
 .safari .homepage-default .group-title .title {
     -webkit-animation: color-text 5s infinite;
 
-    background: linear-gradient(to right, #ffffff 0%, #ffffff 15%, #ffffff 35%, #ffffff 50%, #ffffff 85%, #7ad6eb 90%, #ffffff 100%);
+    background: linear-gradient(to right, #ffffff 0%, #ffffff 15%, #ffffff 35%, #ffffff 50%, #ffffff 85%, #019dcd 90%, #ffffff 100%);
     -webkit-background-clip: text;
 
     -webkit-text-fill-color: transparent;
 }
 
 .homepage-default .group-btn .btn-click {
-    color: #7ad6eb;
+    color: #019dcd;
 }
 
 .homepage-default .group-btn .btn-click .icons {
-    color: #7ad6eb;
+    color: #019dcd;
 }
 
 .homepage-04 .form-subscribe-email .btn-email {
-    background-color: #7ad6eb;
+    background-color: #019dcd;
 }
 
 .box-media:hover .icons {
-    border: 1px solid #7ad6eb;
-    background: #7ad6eb;
+    border: 1px solid #019dcd;
+    background: #019dcd;
 }
 
 .tours-wrapper .tours-list .slick-dots li button:hover {
-    border: 1px solid #7ad6eb;
+    border: 1px solid #019dcd;
 }
 
 .tours-wrapper .tours-list .slick-dots li button:hover:before {
-    color: #7ad6eb;
+    color: #019dcd;
 }
 
 .tours-wrapper .tours-list .slick-dots li.slick-active button {
-    border: 1px solid #7ad6eb;
+    border: 1px solid #019dcd;
 }
 
 .tours-wrapper .tours-list .slick-dots li.slick-active button:before {
-    color: #7ad6eb;
+    color: #019dcd;
 }
 
 .travelers .traveler-list .slick-dots li button:hover {
-    border: 1px solid #7ad6eb;
+    border: 1px solid #019dcd;
 }
 
 .travelers .traveler-list .slick-dots li button:hover:before {
-    color: #7ad6eb;
+    color: #019dcd;
 }
 
 .travelers .traveler-list .slick-dots li.slick-active button {
-    border: 1px solid #7ad6eb;
+    border: 1px solid #019dcd;
 }
 
 .travelers .traveler-list .slick-dots li.slick-active button:before {
-    color: #7ad6eb;
+    color: #019dcd;
 }
 
 .traveler .wrapper-content .name {
-    color: #7ad6eb;
+    color: #019dcd;
 }
 
 .news .news-list .slick-dots li button:hover {
-    border: 1px solid #7ad6eb;
+    border: 1px solid #019dcd;
 }
 
 .news .news-list .slick-dots li button:hover:before {
-    color: #7ad6eb;
+    color: #019dcd;
 }
 
 .news .news-list .slick-dots li.slick-active button {
-    border: 1px solid #7ad6eb;
+    border: 1px solid #019dcd;
 }
 
 .news .news-list .slick-dots li.slick-active button:before {
-    color: #7ad6eb;
+    color: #019dcd;
 }
 
 .text-salebox .text-left .sale-box .number {
-    color: #7ad6eb;
+    color: #019dcd;
 }
 
 .text-salebox .text-left .sale-box .sup-1 {
-    color: #7ad6eb;
+    color: #019dcd;
 }
 
 .a-fact-image-wrapper .a-fact-image .icons:hover {
-    border: 2px solid #7ad6eb;
-    background: #7ad6eb;
+    border: 2px solid #019dcd;
+    background: #019dcd;
 }
 
 .contact-box {
-    background-color: #7ad6eb;
+    background-color: #019dcd;
 }
 
 /*----------- blog detail ----------*/
 
 .item-blog-detail .blog-text .sideline:after {
-    background-color: #7ad6eb;
+    background-color: #019dcd;
 }
 
 .item-blog-detail .blog-text .blog-comment .comment-list .media-right .btn.btn-crystal:hover {
-    color: #7ad6eb;
+    color: #019dcd;
 }
 
 .stars-rating a.star-1:before,
@@ -506,17 +506,17 @@ a:hover {
 .stars-rating a.star-3:before,
 .stars-rating a.star-4:before,
 .stars-rating a.star-5:before {
-    color: #7ad6eb;
+    color: #019dcd;
 }
 
 /*----------  Tour View  ----------*/
 
 .schedule-block .element {
-    background-color: #7ad6eb;
+    background-color: #019dcd;
 }
 
 .timeline-title span {
-    background-color: #7ad6eb;
+    background-color: #019dcd;
 }
 
 /* Gallery Block */
@@ -524,82 +524,82 @@ a:hover {
 /* Expert Block */
 
 .contact-list-media:hover .icons {
-    border: 1px solid #7ad6eb;
-    background: #7ad6eb;
+    border: 1px solid #019dcd;
+    background: #019dcd;
 }
 
 /*----------  Hotel View  ----------*/
 
 .map-block .map-info p.mail:hover a {
-    color: #7ad6eb;
+    color: #019dcd;
 }
 
 .map-block .map-info .footer-block {
-    background-color: #7ad6eb;
+    background-color: #019dcd;
 }
 
 .map-block .map-info .footer-block .btn-open-map:hover {
-    border: 1px solid #7ad6eb;
+    border: 1px solid #019dcd;
 }
 
 /*----------  3.2. tour result  ----------*/
 
 .list-continent-wrapper .continent:before {
-    border: 1px solid #7ad6eb;
-    background-color: #7ad6eb;
+    border: 1px solid #019dcd;
+    background-color: #019dcd;
 }
 
 .special-offer-list .slick-dots li button:hover {
-    border: 1px solid #7ad6eb;
+    border: 1px solid #019dcd;
 }
 
 .special-offer-list .slick-dots li button:hover:before {
-    color: #7ad6eb;
+    color: #019dcd;
 }
 
 .special-offer-list .slick-dots li.slick-active button {
-    border: 1px solid #7ad6eb;
+    border: 1px solid #019dcd;
 }
 
 .special-offer-list .slick-dots li.slick-active button:before {
-    color: #7ad6eb;
+    color: #019dcd;
 }
 
 .our-content .our-icon {
-    color: #7ad6eb;
+    color: #019dcd;
 }
 
 .content-expert .caption-expert {
-    background-color: #7ad6eb;
+    background-color: #019dcd;
 }
 
 .content-tours .wrapper-thin:hover .icon-thin {
-    color: #7ad6eb;
+    color: #019dcd;
 }
 
 .content-tours .wrapper-thin:hover .tours-title {
-    color: #7ad6eb;
+    color: #019dcd;
 }
 
 /*----------  contact  ----------*/
 
 .content-organization:hover .wrapper-img {
-    border: 1px solid #7ad6eb;
+    border: 1px solid #019dcd;
 }
 
 .content-organization .organization-title .title:hover {
-    color: #7ad6eb;
+    color: #019dcd;
 }
 
 .content-organization .content-widget .link:hover {
-    color: #7ad6eb;
+    color: #019dcd;
 }
 
 /*----------  3.2. Flight Results  ----------*/
 
 .flight-result-main .date-selection .btn-wrapper .btn-select:hover {
-    color: #7ad6eb;
-    border-color: #7ad6eb;
+    color: #019dcd;
+    border-color: #019dcd;
 }
 
 /*----------  3.2. Blog  ----------*/
@@ -609,71 +609,71 @@ a:hover {
 /*----------  3.2.1 Blog Post  ----------*/
 
 .blog-post .blog-content .heading:hover {
-    color: #7ad6eb;
+    color: #019dcd;
 }
 
 .blog-post .blog-content .quote-wrapper .quote:hover {
-    color: #7ad6eb;
+    color: #019dcd;
 }
 
 /*----------  car-detail  ----------*/
 
 .wrapper-car-result .car-wigdet .car-item:hover {
-    color: #7ad6eb;
+    color: #019dcd;
 }
 
 .car-price-wrapper {
-    background-color: #7ad6eb;
+    background-color: #019dcd;
 }
 
 .wrapper-driver-detail .driver-title {
-    background-color: #7ad6eb;
+    background-color: #019dcd;
 }
 
 .form-check-img .input-check:checked ~ .img-radio:before {
-    border: 2px solid #7ad6eb;
+    border: 2px solid #019dcd;
 }
 
 /*----------  faq  ----------*/
 
 .wrapper-accordion .panel.active .panel-heading {
-    background-color: #7ad6eb;
+    background-color: #019dcd;
 }
 
 .wrapper-caption-team .wrapper-team-title .team-title:hover {
-    color: #7ad6eb;
+    color: #019dcd;
 }
 
 .wrapper-caption-team .wrapper-team-title .team-title-andress .item-andress:hover {
-    color: #7ad6eb;
+    color: #019dcd;
 }
 
 .team-purchase .title-yellow {
-    color: #7ad6eb;
+    color: #019dcd;
 }
 
 .main-position .list-info .link:hover {
-    background-color: #7ad6eb;
+    background-color: #019dcd;
 }
 
 .group-number .about-us-list li:hover .text {
-    color: #7ad6eb;
+    color: #019dcd;
 }
 
 .group-number .about-us-list li:hover .text:after {
-    color: #7ad6eb;
+    color: #019dcd;
 }
 
 .group-number .about-us-list li:hover .text-number {
-    color: #7ad6eb;
+    color: #019dcd;
 }
 
 .wrapper-llc .list-llc .item:hover {
-    color: #7ad6eb;
+    color: #019dcd;
 }
 
 .view-more .more {
-    color: #7ad6eb;
+    color: #019dcd;
 }
 
 /*=============================
@@ -690,13 +690,13 @@ a:hover {
 
 .datepicker thead .next:hover:before,
 .datepicker thead .prev:hover:before {
-    background-color: #7ad6eb;
+    background-color: #019dcd;
 }
 
 .datepicker tbody td.day.active:before,
 .datepicker tbody td.day.range-end:before,
 .datepicker tbody td.day.range-start:before {
-    background-color: #7ad6eb;
+    background-color: #019dcd;
 }
 
 /*=============================
@@ -704,5 +704,5 @@ a:hover {
  =============================*/
 
 .title-style-2 span {
-    color: #7ad6eb;
+    color: #019dcd;
 }

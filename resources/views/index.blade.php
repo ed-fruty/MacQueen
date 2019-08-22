@@ -148,7 +148,7 @@
                                     </div>
                                     <div class="col-xs-4 topbar-center">
                                         <a href="index.html" class="header-logo logo-black">
-                                            <img src="assets/images/logo/logo-black-color-1.png" alt="" />
+                                            <img src="{{asset('front_assets/images/logo/logo-black-color-1.png')}}" alt="" />
                                         </a>
                                     </div>
                                     <div class="col-xs-4 topbar-right">
@@ -175,7 +175,7 @@
                                     <div class="navbar-header">
                                         <div class="logo">
                                             <a href="index.html" class="header-logo logo-black">
-                                                <img src="assets/images/logo/logo-black-color-1.png" alt="" />
+                                                <img src="{{asset('front_assets/images/logo/logo-black-color-1.png')}}" alt="" />
                                             </a>
                                         </div>
                                     </div>
@@ -338,26 +338,30 @@
                                         <div role="tabpanel" id="hotel" class="tab-pane fade in active">
                                             <div class="find-widget find-hotel-widget widget">
                                                 <h4 class="title-widgets">FIND HOTEL</h4>
-                                                <form class="content-widget">
+                                                <form  class="content-widget" action="/search_for_hotels" method="POST">
+                                                    @csrf
                                                     <div class="text-input small-margin-top">
                                                         <div class="place text-box-wrapper">
                                                             <label class="tb-label">Where do you want to go?</label>
                                                             <div class="input-group">
-                                                                <input type="text" placeholder="Write the place" class="tb-input">
+                                                                <input  type="text" placeholder="Write the place" class="tb-input city_place" >
+                                                            </div>
+                                                            <div id="display_cites"  class="" style="background-color: #c5c6c7">
                                                             </div>
                                                         </div>
+                                                        <input type="hidden" id="hidden_input" name="city_id">
                                                         <div class="input-daterange">
                                                             <div class="text-box-wrapper half">
                                                                 <label class="tb-label">Check in</label>
                                                                 <div class="input-group">
-                                                                    <input type="text" placeholder="MM/DD/YY" class="tb-input" id="fromDate">
+                                                                    <input type="text" placeholder="MM/DD/YY" class="tb-input" id="fromDate" name="checkin_date">
                                                                     <i class="tb-icon fa fa-calendar input-group-addon"></i>
                                                                 </div>
                                                             </div>
                                                             <div class="text-box-wrapper half">
                                                                 <label class="tb-label">Check out</label>
                                                                 <div class="input-group">
-                                                                    <input type="text" placeholder="MM/DD/YY" class="tb-input" id="toDate">
+                                                                    <input type="text" name="checkout_date" placeholder="MM/DD/YY" class="tb-input" id="toDate">
                                                                     <i class="tb-icon fa fa-calendar input-group-addon"></i>
                                                                 </div>
                                                             </div>
@@ -366,11 +370,11 @@
                                                             <label class="tb-label">Rooms</label>
                                                             <div class="select-wrapper">
                                                                 <!--i.fa.fa-chevron-down-->
-                                                                <select class="form-control custom-select selectbox" id="selectRoom">
-                                                                    <option selected="selected">1</option>
-                                                                    <option>2</option>
-                                                                    <option>3</option>
-                                                                    <option>4</option>
+                                                                <select class="form-control custom-select selectbox" id="selectRoom" name="rooms">
+                                                                    <option value="1" selected="selected">1</option>
+                                                                    <option value="2">2</option>
+                                                                    <option value="3">3</option>
+                                                                    <option value="4">4</option>
                                                                     <option id="moreOption" value="more">More Options</option>
                                                                 </select>
                                                             </div>
@@ -393,11 +397,11 @@
                                                                             <div class="text-box-wrapper">
                                                                                 <label class="tb-label">adults(+12 years)</label>
                                                                                 <div class="select-wrapper">
-                                                                                    <select class="form-control custom-select">
-                                                                                        <option selected="selected">1</option>
-                                                                                        <option>2</option>
-                                                                                        <option>3</option>
-                                                                                        <option>4</option>
+                                                                                    <select class="form-control custom-select" name="adults_value[]">
+                                                                                        <option value ="1">1</option>
+                                                                                        <option value ="2">2</option>
+                                                                                        <option value ="3">3</option>
+                                                                                        <option value ="4">4</option>
                                                                                     </select>
                                                                                 </div>
                                                                             </div>
@@ -406,10 +410,11 @@
                                                                             <div class="text-box-wrapper">
                                                                                 <label class="tb-label">children (1 - 11 years)</label>
                                                                                 <div class="select-wrapper">
-                                                                                    <select class="form-control custom-select childNum">
-                                                                                        <option selected="selected" value="0">0</option>
+                                                                                    <select class="form-control custom-select childNum" name="children_value[]">
+                                                                                       <option value="0">0</option>
                                                                                         <option value="1">1</option>
                                                                                         <option value="2">2</option>
+                                                                                       </select>
                                                                                     </select>
                                                                                 </div>
                                                                             </div>
@@ -417,7 +422,7 @@
                                                                         <div class="col-md-3">
                                                                             <div class="text-box-wrapper">
                                                                                 <label class="tb-label">children age</label>
-                                                                                <div class="childrenAge"></div>
+                                                                                <div class="childrenAge row"></div>
                                                                             </div>
                                                                             <div class="text-right">
                                                                                 <button id="removeRoom"><i class="fa fa-minus"></i></button>
@@ -436,11 +441,11 @@
                                                                         <div class="text-box-wrapper">
                                                                             <label class="tb-label">adults(+12 years)</label>
                                                                             <div class="select-wrapper">
-                                                                                <select class="form-control custom-select selectbox">
-                                                                                    <option selected="selected">1</option>
-                                                                                    <option>2</option>
-                                                                                    <option>3</option>
-                                                                                    <option>4</option>
+                                                                                <select class="form-control custom-select selectbox" name="adults_value[]">
+                                                                                    <option value ="1">1</option>
+                                                                                        <option value ="2">2</option>
+                                                                                        <option value ="3">3</option>
+                                                                                        <option value ="4">4</option>
                                                                                 </select>
                                                                             </div>
                                                                         </div>
@@ -449,8 +454,8 @@
                                                                         <div class="text-box-wrapper">
                                                                             <label class="tb-label">children (1 - 11 years)</label>
                                                                             <div class="select-wrapper">
-                                                                                <select class="form-control custom-select selectbox childNum">
-                                                                                    <option selected="selected" value="0">0</option>
+                                                                                <select class="form-control custom-select selectbox childNum" name ="children_value[]">
+                                                                                    <option value="0">0</option>
                                                                                     <option value="1">1</option>
                                                                                     <option value="2">2</option>
                                                                                 </select>
@@ -593,7 +598,7 @@
                                             </div>
                                         </div>
                                         <div data-wow-delay="0.5s" class="about-us-image wow fadeInRight">
-                                            <img src="assets/images/homepage/about-us-2.jpg" alt="" class="img-responsive">
+                                            <img src="{{asset('front_assets/images/homepage/about-us-2.jpg')}}" alt="" class="img-responsive">
                                         </div>
                                     </div>
                                 </div>
@@ -614,7 +619,7 @@
                                             <div class="tours-layout">
                                                 <div class="image-wrapper">
                                                     <a href="tour-view.html" class="link">
-                                                        <img src="assets/images/tours/tour-1.jpg" alt="" class="img-responsive">
+                                                        <img src="{{asset('front_assets/images/tours/tour-1.jpg')}}" alt="" class="img-responsive">
                                                     </a>
                                                     <div class="title-wrapper">
                                                         <a href="tour-view.html" class="title">Newyork city</a>
@@ -665,7 +670,7 @@
                                             <div class="tours-layout">
                                                 <div class="image-wrapper">
                                                     <a href="tour-view.html" class="link">
-                                                        <img src="assets/images/tours/tour-2.jpg" alt="" class="img-responsive">
+                                                        <img src="{{asset('front_assets/images/tours/tour-2.jpg')}}" alt="" class="img-responsive">
                                                     </a>
                                                     <div class="title-wrapper">
                                                         <a href="tour-view.html" class="title">paris city</a>
@@ -712,7 +717,7 @@
                                             <div class="tours-layout">
                                                 <div class="image-wrapper">
                                                     <a href="tour-view.html" class="link">
-                                                        <img src="assets/images/tours/tour-3.jpg" alt="" class="img-responsive">
+                                                        <img src="{{asset('front_assets/images/tours/tour-3.jpg')}}" alt="" class="img-responsive">
                                                     </a>
                                                     <div class="title-wrapper">
                                                         <a href="tour-view.html" class="title">tokyo city</a>
@@ -778,7 +783,7 @@
                                     <div class="col-md-7">
                                         <div class="video-thumbnail">
                                             <div class="video-bg">
-                                                <img src="assets/images/homepage/video-bg.jpg" alt="" class="img-responsive">
+                                                <img src="{{asset('front_assets/images/homepage/video-bg.jpg')}}" alt="" class="img-responsive">
                                             </div>
                                             <div class="video-button-play">
                                                 <i class="icons fa fa-play"></i>
@@ -806,7 +811,7 @@
                                                 <div class="hotels-layout">
                                                     <div class="image-wrapper">
                                                         <a href="hotel-view.html" class="link">
-                                                            <img src="assets/images/hotels/hotel-1.jpg" alt="" class="img-responsive">
+                                                            <img src="{{asset('front_assets/images/hotels/hotel-1.jpg')}}" alt="" class="img-responsive">
                                                         </a>
                                                         <div class="title-wrapper">
                                                             <a href="hotel-view.html" class="title">sarina hotel</a>
@@ -888,7 +893,7 @@
                                                 <div class="hotels-layout">
                                                     <div class="image-wrapper">
                                                         <a href="hotel-view.html" class="link">
-                                                            <img src="assets/images/hotels/hotel-2.jpg" alt="" class="img-responsive">
+                                                            <img src="{{asset('front_assets/images/hotels/hotel-2.jpg')}}" alt="" class="img-responsive">
                                                         </a>
                                                         <div class="title-wrapper">
                                                             <a href="hotel-view.html" class="title">sarina hotel</a>
@@ -966,7 +971,7 @@
                                                 <div class="hotels-layout">
                                                     <div class="image-wrapper">
                                                         <a href="hotel-view.html" class="link">
-                                                            <img src="assets/images/hotels/hotel-3.jpg" alt="" class="img-responsive">
+                                                            <img src="{{asset('front_assets/images/hotels/hotel-3.jpg')}}" alt="" class="img-responsive">
                                                         </a>
                                                         <div class="title-wrapper">
                                                             <a href="hotel-view.html" class="title">sarina hotel</a>
@@ -1044,7 +1049,7 @@
                                                 <div class="hotels-layout">
                                                     <div class="image-wrapper">
                                                         <a href="hotel-view.html" class="link">
-                                                            <img src="assets/images/hotels/hotel-4.jpg" alt="" class="img-responsive">
+                                                            <img src="{{asset('front_assets/images/hotels/hotel-4.jpg')}}" alt="" class="img-responsive">
                                                         </a>
                                                         <div class="title-wrapper">
                                                             <a href="hotel-view.html" class="title">sarina hotel</a>
@@ -1142,11 +1147,11 @@
                                         <div class="traveler-list">
                                             <div class="traveler">
                                                 <div class="cover-image">
-                                                    <img src="assets/images/homepage/cover-image-1.jpg" alt="">
+                                                    <img src="{{asset('front_assets/images/homepage/cover-image-1.jpg')}}" alt="">
                                                 </div>
                                                 <div class="wrapper-content">
                                                     <div class="avatar">
-                                                        <img src="assets/images/homepage/avatar-1.jpg" alt="" class="img-responsive">
+                                                        <img src="{{asset('front_assets/images/homepage/avatar-1.jpg')}}" alt="" class="img-responsive">
                                                     </div>
                                                     <p class="name">Sandara park</p>
                                                     <p class="address">roma, italy</p>
@@ -1155,11 +1160,11 @@
                                             </div>
                                             <div class="traveler">
                                                 <div class="cover-image">
-                                                    <img src="assets/images/homepage/cover-image-2.jpg" alt="">
+                                                    <img src="{{asset('front_assets/images/homepage/cover-image-2.jpg')}}" alt="">
                                                 </div>
                                                 <div class="wrapper-content">
                                                     <div class="avatar">
-                                                        <img src="assets/images/homepage/avatar-2.jpg" alt="" class="img-responsive">
+                                                        <img src="{{asset('front_assets/images/homepage/avatar-2.jpg')}}" alt="" class="img-responsive">
                                                     </div>
                                                     <p class="name">Kown Jiyong</p>
                                                     <p class="address">london, England</p>
@@ -1168,11 +1173,11 @@
                                             </div>
                                             <div class="traveler">
                                                 <div class="cover-image">
-                                                    <img src="assets/images/homepage/cover-image-3.jpg" alt="">
+                                                    <img src="{{asset('front_assets/images/homepage/cover-image-3.jpg')}}" alt="">
                                                 </div>
                                                 <div class="wrapper-content">
                                                     <div class="avatar">
-                                                        <img src="assets/images/homepage/avatar-3.jpg" alt="" class="img-responsive">
+                                                        <img src="{{asset('front_assets/images/homepage/avatar-3.jpg')}}" alt="" class="img-responsive">
                                                     </div>
                                                     <p class="name">taylor rose</p>
                                                     <p class="address">pari, France</p>
@@ -1181,11 +1186,11 @@
                                             </div>
                                             <div class="traveler">
                                                 <div class="cover-image">
-                                                    <img src="assets/images/homepage/cover-image-4.jpg" alt="">
+                                                    <img src="{{asset('front_assets/images/homepage/cover-image-4.jpg')}}" alt="">
                                                 </div>
                                                 <div class="wrapper-content">
                                                     <div class="avatar">
-                                                        <img src="assets/images/homepage/avatar-4.jpg" alt="" class="img-responsive">
+                                                        <img src="{{asset('front_assets/images/homepage/avatar-4.jpg')}}" alt="" class="img-responsive">
                                                     </div>
                                                     <p class="name">john smith</p>
                                                     <p class="address">new york, USA</p>
@@ -1212,7 +1217,7 @@
                                             <div class="new-layout">
                                                 <div class="image-wrapper">
                                                     <a href="#" class="link">
-                                                        <img src="assets/images/homepage/new-1.jpg" alt="" class="img-responsive">
+                                                        <img src="{{asset('front_assets/images/homepage/new-1.jpg')}}" alt="" class="img-responsive">
                                                     </a>
                                                     <div class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ...</div>
                                                 </div>
@@ -1249,7 +1254,7 @@
                                             <div class="new-layout">
                                                 <div class="image-wrapper">
                                                     <a href="#" class="link">
-                                                        <img src="assets/images/homepage/new-2.jpg" alt="" class="img-responsive">
+                                                        <img src="{{asset('front_assets/images/homepage/new-2.jpg')}}" alt="" class="img-responsive">
                                                     </a>
                                                     <div class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ...</div>
                                                 </div>
@@ -1285,7 +1290,7 @@
                                             <div class="new-layout">
                                                 <div class="image-wrapper">
                                                     <a href="#" class="link">
-                                                        <img src="assets/images/homepage/new-3.jpg" alt="" class="img-responsive">
+                                                        <img src="{{asset('front_assets/images/homepage/new-3.jpg')}}" alt="" class="img-responsive">
                                                     </a>
                                                     <div class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ...</div>
                                                 </div>
@@ -1392,25 +1397,25 @@
                                                 <a href="#" class="icons icons-1">
                                                     <i class="fa fa-plane"></i>
                                                 </a>
-                                                <img src="assets/images/homepage/area-1.png" alt="" class="img-responsive">
+                                                <img src="{{asset('front_assets/images/homepage/area-1.png')}}" alt="" class="img-responsive">
                                             </div>
                                             <div class="a-fact-image">
                                                 <a href="#" class="icons icons-2">
                                                     <i class="fa fa-map-marker"></i>
                                                 </a>
-                                                <img src="assets/images/homepage/area-2.png" alt="" class="img-responsive">
+                                                <img src="{{asset('front_assets/images/homepage/area-2.png')}}" alt="" class="img-responsive">
                                             </div>
                                             <div class="a-fact-image">
                                                 <a href="#" class="icons icons-3">
                                                     <i class="fa fa-users"></i>
                                                 </a>
-                                                <img src="assets/images/homepage/area-3.png" alt="" class="img-responsive">
+                                                <img src="{{asset('front_assets/images/homepage/area-3.png')}}" alt="" class="img-responsive">
                                             </div>
                                             <div class="a-fact-image">
                                                 <a href="#" class="icons icons-4">
                                                     <i class="fa fa-suitcase"></i>
                                                 </a>
-                                                <img src="assets/images/homepage/area-4.png" alt="" class="img-responsive">
+                                                <img src="{{asset('front_assets/images/homepage/area-4.png')}}" alt="" class="img-responsive">
                                             </div>
                                         </div>
                                     </div>
@@ -1459,7 +1464,7 @@
                             <div class="container">
                                 <div class="footer-main-wrapper">
                                     <a href="index.html" class="logo-footer logo-black">
-                                        <img src="assets/images/logo/logo-black-color-1.png" alt="" class="img-responsive" />
+                                        <img src="{{asset('front_assets/images/logo/logo-black-color-1.png')}}" alt="" class="img-responsive" />
                                     </a>
                                     <div class="row">
                                         <div class="col-2">
@@ -1587,32 +1592,32 @@
                                                         <ul class="list-unstyled list-inline">
                                                             <li>
                                                                 <a href="#" class="thumb">
-                                                                    <img src="assets/images/footer/gallery-01.jpg" alt="" class="img-responsive" />
+                                                                    <img src="{{asset('front_assets/images/footer/gallery-01.jpg')}}" alt="" class="img-responsive" />
                                                                 </a>
                                                             </li>
                                                             <li>
                                                                 <a href="#" class="thumb">
-                                                                    <img src="assets/images/footer/gallery-02.jpg" alt="" class="img-responsive" />
+                                                                    <img src="{{asset('front_assets/images/footer/gallery-02.jpg')}}" alt="" class="img-responsive" />
                                                                 </a>
                                                             </li>
                                                             <li>
                                                                 <a href="#" class="thumb">
-                                                                    <img src="assets/images/footer/gallery-03.jpg" alt="" class="img-responsive" />
+                                                                    <img src="{{asset('front_assets/images/footer/gallery-03.jpg')}}" alt="" class="img-responsive" />
                                                                 </a>
                                                             </li>
                                                             <li>
                                                                 <a href="#" class="thumb">
-                                                                    <img src="assets/images/footer/gallery-04.jpg" alt="" class="img-responsive" />
+                                                                    <img src="{{asset('front_assets/images/footer/gallery-04.jpg')}}" alt="" class="img-responsive" />
                                                                 </a>
                                                             </li>
                                                             <li>
                                                                 <a href="#" class="thumb">
-                                                                    <img src="assets/images/footer/gallery-05.jpg" alt="" class="img-responsive" />
+                                                                    <img src="{{asset('front_assets/images/footer/gallery-05.jpg')}}" alt="" class="img-responsive" />
                                                                 </a>
                                                             </li>
                                                             <li>
                                                                 <a href="#" class="thumb">
-                                                                    <img src="assets/images/footer/gallery-06.jpg" alt="" class="img-responsive" />
+                                                                    <img src="{{asset('front_assets/images/footer/gallery-06.jpg')}}" alt="" class="img-responsive" />
                                                                 </a>
                                                             </li>
                                                         </ul>
@@ -1629,62 +1634,62 @@
                                 <div class="slide-logo-wrapper">
                                     <div class="logo-item">
                                         <a href="#" class="link">
-                                            <img src="assets/images/footer/logo-01-g.png" alt="" class="img-responsive" />
+                                            <img src="{{asset('front_assets/images/footer/logo-01-g.png')}}" alt="" class="img-responsive" />
                                         </a>
                                     </div>
                                     <div class="logo-item">
                                         <a href="#" class="link">
-                                            <img src="assets/images/footer/logo-02-g.png" alt="" class="img-responsive" />
+                                            <img src="{{asset('front_assets/images/footer/logo-02-g.png')}}" alt="" class="img-responsive" />
                                         </a>
                                     </div>
                                     <div class="logo-item">
                                         <a href="#" class="link">
-                                            <img src="assets/images/footer/logo-03-g.png" alt="" class="img-responsive" />
+                                            <img src="{{asset('front_assets/images/footer/logo-03-g.png')}}" alt="" class="img-responsive" />
                                         </a>
                                     </div>
                                     <div class="logo-item">
                                         <a href="#" class="link">
-                                            <img src="assets/images/footer/logo-04-g.png" alt="" class="img-responsive" />
+                                            <img src="{{asset('front_assets/images/footer/logo-04-g.png')}}" alt="" class="img-responsive" />
                                         </a>
                                     </div>
                                     <div class="logo-item">
                                         <a href="#" class="link">
-                                            <img src="assets/images/footer/logo-05-g.png" alt="" class="img-responsive" />
+                                            <img src="{{asset('front_assets/images/footer/logo-05-g.png')}}" alt="" class="img-responsive" />
                                         </a>
                                     </div>
                                     <div class="logo-item">
                                         <a href="#" class="link">
-                                            <img src="assets/images/footer/logo-06-g.png" alt="" class="img-responsive" />
+                                            <img src="{{asset('front_assets/images/footer/logo-06-g.png')}}" alt="" class="img-responsive" />
                                         </a>
                                     </div>
                                     <div class="logo-item">
                                         <a href="#" class="link">
-                                            <img src="assets/images/footer/logo-01-g.png" alt="" class="img-responsive" />
+                                            <img src="{{asset('front_assets/images/footer/logo-01-g.png')}}" alt="" class="img-responsive" />
                                         </a>
                                     </div>
                                     <div class="logo-item">
                                         <a href="#" class="link">
-                                            <img src="assets/images/footer/logo-02-g.png" alt="" class="img-responsive" />
+                                            <img src="{{asset('front_assets/images/footer/logo-02-g.png')}}" alt="" class="img-responsive" />
                                         </a>
                                     </div>
                                     <div class="logo-item">
                                         <a href="#" class="link">
-                                            <img src="assets/images/footer/logo-03-g.png" alt="" class="img-responsive" />
+                                            <img src="{{asset('front_assets/images/footer/logo-03-g.png')}}" alt="" class="img-responsive" />
                                         </a>
                                     </div>
                                     <div class="logo-item">
                                         <a href="#" class="link">
-                                            <img src="assets/images/footer/logo-04-g.png" alt="" class="img-responsive" />
+                                            <img src="{{asset('front_assets/images/footer/logo-04-g.png')}}" alt="" class="img-responsive" />
                                         </a>
                                     </div>
                                     <div class="logo-item">
                                         <a href="#" class="link">
-                                            <img src="assets/images/footer/logo-05-g.png" alt="" class="img-responsive" />
+                                            <img src="{{asset('front_assets/images/footer/logo-05-g.png')}}" alt="" class="img-responsive" />
                                         </a>
                                     </div>
                                     <div class="logo-item">
                                         <a href="#" class="link">
-                                            <img src="assets/images/footer/logo-06-g.png" alt="" class="img-responsive" />
+                                            <img src="{{asset('front_assets/images/footer/logo-06-g.png')}}" alt="" class="img-responsive" />
                                         </a>
                                     </div>
                                 </div>
@@ -1746,4 +1751,32 @@
         </div>
         @endsection
 
-    
+ @section('footer_scripts')
+<script type="text/javascript">
+$(document).ready(function(){
+            $('input.city_place').keyup(function() {
+                var display_cites = $('.city_place');
+               //perform ajax call...
+               var city_id =display_cites.val();
+              // alert(city_id);
+                var type = "GET";
+                $.ajax({
+                    type: type,
+                    url: 'get_cities/'+city_id,
+                     success:function(data){
+                       $('#display_cites').fadeIn(); 
+                       $('#display_cites').show(); 
+                      $('#display_cites').html(data);
+                       //alert('ddddd');
+                      }
+                   });
+            });
+
+        $(document).on('click', '.result', function(){  
+        $('#hidden_input').val($(this).val());
+        $('.city_place').val($(this).text());  
+        $('#display_cites').fadeOut(); 
+        });
+    });    
+ </script>
+ @endsection

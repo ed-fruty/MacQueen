@@ -7,7 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 class SafraCity extends Model
 {
 	
-protected $table = "safra_cities"
+protected $table = "cities";
+
     protected $fillable=[
         'name',
         'country_id',
@@ -17,7 +18,5 @@ protected $table = "safra_cities"
         'long',
         'region_id',
     ];
-    public function  country(){
-        return $this->belongsTo(Country::class);
-    }
+   
 }

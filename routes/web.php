@@ -24,6 +24,8 @@ Route::group(['namespace' => 'Frontend'], function () {
     //safra api integration
         Route::post('search_hotel', 'SafraController@searchHotel');
         Route::get('/', 'SafraController@index');
+        Route::get('/get_cities/{city_id}', 'SafraController@getCitiesFromDB');
+        
          Route::get('hotels/{id}', 'SafraController@getHotels');
           Route::get('hotels/details/{id}', 'SafraController@getHotelDetails');
        Route::post('search_for_hotels', 'SafraController@searchForHotelsWeb');

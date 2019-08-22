@@ -5,10 +5,9 @@ namespace App\Http\Controllers\Frontend;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
-use Response;
-//use Validator;
-use App\SafraCity;
 use App\SafraHotel;
+use Response;
+use App\SafraCity;
 use GuzzleHttp\Client;
 use Lang;
 use View;
@@ -21,8 +20,18 @@ class SafraController extends Controller
         return View::make('index');
     }
     public function getCitiesFromDB($keyword){
-      $cities =SafraCity::where('name','like', '%' .$keyword. '%')->get(['id','name']);
-
+      $cities =SafraCity::where('name','like', '%'.$keyword.'%')->get(['id','name']);
+     
+     $output = '<seclect  style="position:relative">';
+      foreach($cities as $row)
+      {
+       $output .= '
+       <option class="result" value='.$row->id .'>'.$row->name.'</option>
+       ';
+      }
+      $output .= '</select>';
+      return $output;
+  
     }
   //cancel booking 
   public function searchHotel(Request $request){
@@ -49,14 +58,41 @@ class SafraController extends Controller
   //search for hotels 
   public function searchForHotelsWeb(Request $request){
         $data = (array)$request->all();
-       // dd($data);
-        $data['hotels'] =  [81987];
-        // $data['hotels'] = getHotels($data['city']);
-         $rooms = new \stdClass();
-         $rooms->adults=$data['adults_value'];
-         $rooms->children=$data['children_value'];
-        $data['rooms'] = [$rooms] ;
-        // $data['r']
+        $data['checkin_date']=date("Y-m-d", strtotime($data['checkin_date']));
+        $data['checkout_date']=date("Y-m-d", strtotime($data['checkout_date']));
+        //$data['hotels'] = $this->getHotels($data['city_id']);
+        $data['hotels'] =[81987];
+        $rooms_num =$data['rooms'];
+        if($rooms_num =='more')
+         {
+                $rooms_num =count($data['adults_value'])-1;
+                unset($data['adults_value'][0]);
+                unset($data['children_value'][0]);
+                  $data['rooms']=[];
+                  for($i=1;$i<=$rooms_num;$i++)
+                   {
+                     $rooms = new \stdClass();
+                     $rooms->adults=$data['adults_value'][$i];
+                     $rooms->children=$data['children_value'][$i];
+                    $children_ages=[];
+                     for ($j=1;$j<=$data['children_value'][$i];$j++) {
+                       array_push($children_ages, $data['child_age_'.$j]); 
+                     }
+                      $rooms->children_ages =$children_ages;
+                     array_push($data['rooms'], $rooms); 
+                   }
+        }
+        else
+        {
+              $data['rooms']=[];
+               for($i=0;$i<$rooms_num;$i++)
+               {
+                 $rooms = new \stdClass();
+                 $rooms->adults=$data['adults_value'][0];
+                 $rooms->children=$data['children_value'][0];
+                 array_push($data['rooms'], $rooms); 
+               } 
+         }
         $data['destination_type'] ='HOTEL';
         $json = $data;
         $headers = [
@@ -71,42 +107,23 @@ class SafraController extends Controller
         $response= $response->getBody()->getContents();
 
         $results = json_decode($response);
-       // dd($results); 
-     return View::make('safra.hotels')->with(compact('results'));
-    //    return $results;
+        //dd($results); 
+        return View::make('hotel-result')->with(compact('results'));
   }
 
   public function searchHotelByName(Request $request){
     $data = (array)$request->all();
-    $hotel_name =$data['name'];
     $hotels = $data['hotels'];
-    $promotions_price = $data['price'];
-    $stars5 =$data['stars5'];
-    $stars4 = $data['stars4'];
-    $stars3 = $data['stars3'];
-    $stars2 =$data['stars2'];
-    $stars1 = $data['stars1'];
+    $min_price =$data['min_price'];
+    $max_price =$data['max_price'];
+    $rating = $data['rating'];
     $results= new \stdClass();
     $results->data =[] ;
     foreach ($hotels['data'] as $key=>$hotel) {
-      // if($stars4  =="true"){
-      //   print_r([1,2,3]);
-      //   die();
-      // }
-     if (!empty($hotel_name) && (strpos($hotel['name'], $hotel_name)===false) 
-      ||
-      (!empty($promotions_price) && $hotel['promotions_price'] !=$promotions_price)
-      ||
-      ($stars5 =="true" && $hotel['stars'] !=5)
-      ||
-      ($stars4 =="true" && $hotel['stars'] !=4)
-      ||
-      ($stars3  =="true" && $hotel['stars'] !=3)
-      ||
-      ($stars2 =="true" && $hotel['stars'] !=2)
-      ||
-      ($stars1  =="true" && $hotel['stars'] !=1)
-    ) {
+      if(($hotel['stars'] !=$rating)
+      
+     )
+     {
        unset($hotels['data'][$key]);
     }
   }
@@ -121,20 +138,10 @@ class SafraController extends Controller
 
   //get hotels 
     public function getHotels($city_id){
-    $id = $city_id;
-    $client = new Client(); //GuzzleHttp\Client
-        $request = $client->get('http://34.246.175.100/api/v1/static-data/hotels?city_id='.$id,
-        [
-            'headers' => [
-                'Authorization' => 'ApiAccessToken QxG15j1mis46b3IaLUkWexOmoOhQOAjP',
-            ],
-        ]);
-        $response = $request->getBody()->getContents();
-        
-      $hotels = json_decode($response);
+      $hotels =SafraHotel::where('city_id',$city_id)->get(['id']);
       $hotel_ids =[];
-      foreach ($hotels->data as $hotel) {
-              array_push($hotel_ids, $hotel->id);
+      foreach ($hotels as $hotel) {
+              array_push($hotel_ids, $hotel['id']);
       }
       return $hotel_ids;
   }
