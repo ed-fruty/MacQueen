@@ -49,7 +49,7 @@ class UserPackageReservation extends Resource
             BelongsTo::make('User','user'),
             BelongsTo::make('Package','package'),
             BelongsTo::make('PackageHotel','package_hotel'),
-            BelongsTo::make('PackageCurrency','package_currency'),
+            BelongsTo::make('CCurrency','currency'),
             BelongsTo::make('PackageStatus','package_status'),
             Currency::make('total_price')->sortable(),
             Number::make('adults_no'),

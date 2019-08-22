@@ -10,9 +10,13 @@ use App\Nova\Blog\GeneralArticleTag;
 use App\Nova\City;
 use App\Nova\Contact;
 use App\Nova\Country;
+use App\Nova\Currency;
+use App\Nova\GeneralCurrency;
 use App\Nova\GeneralPackagesHotelAmenity;
 use App\Nova\GeneralPackagesInclusion;
 use App\Nova\GeneralPackagesType;
+use App\Nova\MacqueenProviders\Provider;
+use App\Nova\MacqueenProviders\ProviderCreditDeal;
 use App\Nova\Metrics\Contacts;
 use App\Nova\Metrics\Packages;
 use App\Nova\Metrics\UserPackageReservation;
@@ -154,7 +158,9 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
             PackageHotelRoom::class,
             \App\Nova\UserPackageReservation::class,
             PackageStatus::class,
-            PackageCurrency::class,
+            Currency::class,
+            Provider::class,
+            ProviderCreditDeal::class,
 
 
 

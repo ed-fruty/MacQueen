@@ -2,6 +2,7 @@
 
 namespace App\Packages;
 
+use App\Currency;
 use App\User;
 use Illuminate\Database\Eloquent\Model;
 
@@ -15,7 +16,7 @@ class UserPackageReservation extends Model
         'package_status_id',
         'adults_no',
         'children_no',
-        'package_currency_id'
+        'currency_id'
     ];
     public function user(){
         return $this->belongsTo(User::class,'user_id');
@@ -26,8 +27,8 @@ class UserPackageReservation extends Model
     public function package_hotel(){
         return $this->belongsTo(PackageHotel::class,'package_hotel_id');
     }
-    public function package_currency(){
-        return $this->belongsTo(PackageCurrency::class,'package_currency_id');
+    public function currency(){
+        return $this->belongsTo(Currency::class,'currency_id');
     }
     public function package_status(){
         return $this->belongsTo(PackageStatus::class,'package_status_id');

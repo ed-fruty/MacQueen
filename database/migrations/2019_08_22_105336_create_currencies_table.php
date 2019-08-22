@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateUserReservedPackageReservationsTable extends Migration
+class CreateCurrenciesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,12 @@ class CreateUserReservedPackageReservationsTable extends Migration
      */
     public function up()
     {
-        Schema::create('user_reserved_package_reservations', function (Blueprint $table) {
+        Schema::create('currencies', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('currency_name')->nullable();
+            $table->string('currency_name_en');
+            $table->string('iso4217_alpha3');
+            $table->string('iso4217_num3')->nullable();
             $table->timestamps();
         });
     }
@@ -26,6 +30,6 @@ class CreateUserReservedPackageReservationsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('user_reserved_package_reservations');
+        Schema::dropIfExists('currencies');
     }
 }

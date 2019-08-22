@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Packages;
+use App\Currency;
 use Illuminate\Database\Eloquent\Model;
 
 class PackageHotelRoom extends Model
@@ -12,15 +13,15 @@ class PackageHotelRoom extends Model
         'max_children_no',
         'adult_price',
         'children_price',
-        'package_currency_id'
+        'currency_id'
     ];
 
     public function package_hotel(){
         return $this->belongsTo(PackageHotel::class,'package_hotel_id');
     }
 
-    public function package_currency(){
-        return $this->belongsTo(PackageCurrency::class,'package_currency_id');
+    public function currency(){
+        return $this->belongsTo(Currency::class,'currency_id');
     }
 
 

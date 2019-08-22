@@ -53,7 +53,7 @@ class PackageHotelRoom extends Resource
             Number::make('max_children_no'),
             Currency::make('adult_price'),
             Currency::make('children_price'),
-            BelongsTo::make('PackageCurrency','package_currency'),
+            BelongsTo::make('Currency','currency'),
         ];
     }
 

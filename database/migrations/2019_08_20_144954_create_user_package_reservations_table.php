@@ -20,7 +20,7 @@ class CreateUserPackageReservationsTable extends Migration
             $table->bigInteger('package_hotel_id');
             $table->integer('package_status_id');
             $table->integer('total_price');
-            $table->integer('package_currency_id');
+            $table->integer('currency_id');
             $table->integer('adults_no');
             $table->integer('children_no');
             $table->timestamps();

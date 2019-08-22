@@ -7,24 +7,21 @@ use Illuminate\Http\Request;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
-class PackageCurrency extends Resource
+class Currency extends Resource
 {
     /**
      * The model the resource corresponds to.
      *
      * @var string
      */
-    public static $model = 'App\Packages\PackageCurrency';
-    public static $group='Packages';
-    public static $icon='<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAB6klEQVRIx2NgoDNgBmJBCjEzPgtmiDnE/qcEg8zAbTwjy2qTGbf/U4JBZgwOCzwX3/+/9uqH/x2HX4H5qRufgPnYMEgtyRZErn74HwQOP/wC5oMswgVAakm2wG7u3f/5257+j137CMz3WXIfzMeGQWoHXxwELn/w/87bn/9XXfkA5lfufg7mY8MgtYMvDsxm3v7vMO/uf5s5d8B8y1l3wHxsGKR28FlAShBFrL7/32zWOaC66yALTgNNYqdKJF968eZ/64nJ/33WhwNxwH/v9cH/TSot/vPL8z8BmqZBUTI1m3Xxv+eaVLDBIFxxqBrO9ljm819AWeAl0EQBsjNa1KZuuIFNJ1r+X3p9+f/Ca0v++64PBIvZ9Nr/A5rYSFYc/Pn353/I5gi4BWdenv2fvTf//+JrS/9Hbo2Bi/MrCdwnq7BbcvEh3BAQbj3R8f/Cq4v/2052oYiLm0p8IysOTGdeB0cozKAJ5yb9D9sc/f/y66v/43ckw8WFNIWfkx3JLitq4Aatu73h/6HHh/+fenHmf+CmULCY0yy3f0xMTNPIrjLlAmL+eywPhFvSdrITHsHea/3/ixmJfweaJ0tJpW8moCLw2qbH/h9yuINcLmYMNtyFGq0QUDpv5FcUuCduIvENFObQYIG7HACrCOEg6S4xHwAAAABJRU5ErkJggg==">';
-    public static function authorizable() { return true; }
-
+    public static $model = 'App\Currency';
+    public static $icon='<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAABmJLR0QA/wD/AP+gvaeTAAADDklEQVRIibXVyU8TYRQAcBMvxpMnb148GGPi3cST/4PGk7KEgpRFpBvdpC1dmCltkRCFmM43My1SSncqa4EiaGllKS4sEhQs6MGIxoOJgfbZKWttC6GtX/Iyc+n79S0zc+pUHo+hBp2TFaIz+cyZcvQVSKWrpm7knKhRbrqPKc3zuMz0XMulpLpK4rahkryuYxMX4vdu5poTgElMCkzfua0M9IHS74WHDhvUE5YfCkNHRKMwreB8alXLIZdxLjnQXtp+9sQALqblmMGypVgYBPniEPBne6A25DyISSdwJxxQE7IDv42K4dVEyckrMFi2MwFcvx0wIf0Lq6O/8NpI4LUSoOWiMX0VydFVEMKcASYkXVaIt4tSc8xX1HUIBM0EYDzyU1MVcVNXha7lDCRi3AYNMjKqEqEou5OAgn4jqEVU5NgKtBJa2JhhBo/f+cCxPAF4uA8eTDqgaISCOz5jUmhE5M+sAd/HILxcmwJifgTmN97Ak9m+FIAJtZj8nRWgmxuA6chs4p6poHTUBO/Xw8Aeo1MQhYL8w7wBTgRg8dZsfvsAaGE0qUXexTGQB2wpiFiLovpKdDUJwKVmebohc0KufWj561sQT7mheBcoGCZgcX0OWCNkClKvRlFdBXXpoAKRSYrpLVvMU/xvBa92+9+99AJ8K5OgDDoguBqCwjjAJCsbTR264BGKqaSk4wCg6fO4zBzVPLOD2uMCwYwnaT3rXrsTA2aqYPl3eq+f8gDbnzqHPUAtQc6kNllvWU/jQnpTGeiFuoAb1AoaauP/9jAkCLogvDYDrTPetImTK0CutBvF9E7LJzcE/bYYb9gOwp5uEHpt+1vEDLkk3vfw2jQ0T3vSAy1HAEkQl/zMH7LFZMZO4I07gAEPP2gM9DTcmx2QDhJZu0CkT92anIDDUPx7ELnnQjv7jhNQ7D0CkJDO47NmgDQCtFnqMEKF2QhFcaS8Kw8VZIJYTmPi+1BmNcLdwTwC6SCWkwB5PcovsHeaKtHlRgH6zu4wgkj3H4C9YygnLspU1JK8AbVk8/u/GBmuNpi8JBAAAAAASUVORK5CYII=">';
     /**
      * The single value that should be used to represent the resource when being displayed.
      *
      * @var string
      */
-    public static $title = 'name';
+    public static $title = 'currency_name_en';
 
     /**
      * The columns that should be searched.
@@ -32,7 +29,7 @@ class PackageCurrency extends Resource
      * @var array
      */
     public static $search = [
-        'name',
+        'currency_name_en',
     ];
 
     /**
@@ -45,8 +42,10 @@ class PackageCurrency extends Resource
     {
         return [
             ID::make()->sortable(),
-            Text::make('name'),
-            Text::make('code'),
+            Text::make('currency_name')->sortable(),
+            Text::make('currency_name_en')->sortable(),
+            Text::make('iso4217_alpha3'),
+            Text::make('iso4217_num3'),
         ];
     }
 
